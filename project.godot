@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="IsaacGame"
+config/name="Botanibox"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
-config/icon="res://icon.svg"
+boot_splash/image="uid://cwrtsjwi0d2xg"
+config/icon="uid://csawgsh4foex8"
 
 [dotnet]
 
@@ -25,3 +26,5 @@ project/assembly_name="IsaacGame"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
