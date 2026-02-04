@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://c6wn2l3abq0t3"]
 
 [ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="1_cx5u4"]
-[ext_resource type="Texture2D" uid="uid://b0dxo2rkh0l4n" path="res://art/Flowers/dasiy_flower.png" id="2_qojho"]
+[ext_resource type="Texture2D" uid="uid://coe5v68jhs5ve" path="res://art/Flowers/daisy.png" id="2_qojho"]
 [ext_resource type="Texture2D" uid="uid://67n2hw6gpfdv" path="res://art/Flowers/forgetmenots.png" id="3_77o53"]
 [ext_resource type="Texture2D" uid="uid://dotyxp2m80wr8" path="res://art/Flowers/pansy_flower.png" id="4_penjn"]
 [ext_resource type="Texture2D" uid="uid://c2ws3ywfndfck" path="res://art/Flowers/sunflower.png" id="5_bs51t"]
+
+[sub_resource type="TileSet" id="TileSet_cx5u4"]
 
 [node name="world" type="Node" unique_id=1686023522]
 
@@ -28,3 +30,9 @@ texture = ExtResource("4_penjn")
 [node name="Sunflower" type="Sprite2D" parent="Fullgrasspiece" unique_id=506842668]
 visible = false
 texture = ExtResource("5_bs51t")
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1520970510]
+position = Vector2(1, -1)
+tile_set = SubResource("TileSet_cx5u4")
+format = 2
+layer_1/name = "Layer1"
