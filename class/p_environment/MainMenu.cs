@@ -18,7 +18,7 @@ public partial class MainMenu : Control
 
 	public void _on_play_pressed()
 	{
-		GetTree().ChangeSceneToNode(GetNode("res://class/p_environment/world.tscn"));
+		GetTree().ChangeSceneToFile(("res://class/p_environment/world.tscn"));
 	}
 
 	public async void _on_quit_pressed()
