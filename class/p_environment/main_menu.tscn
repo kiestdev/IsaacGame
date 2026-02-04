@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dvmv301ub0lox"]
+
+[ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_7pak5"]
+[ext_resource type="Script" uid="uid://bq12jqirces6m" path="res://class/p_environment/MainMenu.cs" id="1_8adxl"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8adxl"]
+diffuse_texture = ExtResource("1_7pak5")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pkit3"]
+font_size = 148
+font_color = Color(0, 1, 0, 1)
+outline_size = 12
+outline_color = Color(0, 0.4745098, 0, 1)
+
+[node name="MainMenu" type="Control" unique_id=772716003]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_8adxl")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=563466806]
+position = Vector2(-6.4999695, 4.9999847)
+scale = Vector2(9.6171875, 5.4687495)
+texture = SubResource("CanvasTexture_8adxl")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2117464253]
+
+[node name="play" type="Button" parent="." unique_id=1055620167]
+layout_mode = 0
+offset_left = -115.0
+offset_top = -1.0
+offset_right = 116.0
+offset_bottom = 30.0
+text = "play botanibox"
+
+[node name="quit" type="Button" parent="." unique_id=131747048]
+layout_mode = 0
+offset_left = -119.0
+offset_top = 37.0
+offset_right = 119.0
+offset_bottom = 68.0
+text = "dont play botanibox"
+
+[node name="Label" type="Label" parent="." unique_id=116041236]
+layout_mode = 0
+offset_left = -363.0
+offset_top = -263.0
+offset_right = 363.0
+offset_bottom = -60.0
+text = "botanibox"
+label_settings = SubResource("LabelSettings_pkit3")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
