@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bdid836pvbtjl"
-path="res://.godot/imported/silly_birdman_nutral(mouth_open).png-e79ce5228fd302e2f9632b11dd971941.ctex"
+path="res://.godot/imported/silly_birdman_nutral(mouth_open).png-139505817609e04581e9adb6f4699a78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/silly_birdman_nutral(mouth_open).png"
-dest_files=["res://.godot/imported/silly_birdman_nutral(mouth_open).png-e79ce5228fd302e2f9632b11dd971941.ctex"]
+source_file="res://art/soul/silly_birdman_nutral(mouth_open).png"
+dest_files=["res://.godot/imported/silly_birdman_nutral(mouth_open).png-139505817609e04581e9adb6f4699a78.ctex"]
 
 [params]
 

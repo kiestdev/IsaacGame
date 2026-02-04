@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://sxsp0s2faui8"
-path="res://.godot/imported/Sad_bird_man(mouth_open) .png-9177a16fcc2ef6156014b81235f45f69.ctex"
+path="res://.godot/imported/Sad_bird_man(mouth_open) .png-0b7e3177e25eafec34e2ef4626ca537b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/Sad_bird_man(mouth_open) .png"
-dest_files=["res://.godot/imported/Sad_bird_man(mouth_open) .png-9177a16fcc2ef6156014b81235f45f69.ctex"]
+source_file="res://art/soul/Sad_bird_man(mouth_open) .png"
+dest_files=["res://.godot/imported/Sad_bird_man(mouth_open) .png-0b7e3177e25eafec34e2ef4626ca537b.ctex"]
 
 [params]
 

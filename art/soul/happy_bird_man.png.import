@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfiadah05h18o"
-path="res://.godot/imported/happy_bird_man.png-117a33fcb9361fc5e10e561805055ba6.ctex"
+path="res://.godot/imported/happy_bird_man.png-22db2dededa1e04813b1ab7e7985028e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/happy_bird_man.png"
-dest_files=["res://.godot/imported/happy_bird_man.png-117a33fcb9361fc5e10e561805055ba6.ctex"]
+source_file="res://art/soul/happy_bird_man.png"
+dest_files=["res://.godot/imported/happy_bird_man.png-22db2dededa1e04813b1ab7e7985028e.ctex"]
 
 [params]
 
