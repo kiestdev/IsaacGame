@@ -2,9 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="1_cx5u4"]
 [ext_resource type="Texture2D" uid="uid://coe5v68jhs5ve" path="res://art/Flowers/daisy.png" id="2_qojho"]
-[ext_resource type="Texture2D" uid="uid://67n2hw6gpfdv" path="res://art/Flowers/forgetmenots.png" id="3_77o53"]
+[ext_resource type="Texture2D" uid="uid://bcim51fw2t0l" path="res://art/Flowers/forgetmenots.png" id="3_77o53"]
+[ext_resource type="Texture2D" uid="uid://bmwpe0cblh6n" path="res://art/Flowers/mini/minidaisy.png" id="3_penjn"]
 [ext_resource type="Texture2D" uid="uid://dotyxp2m80wr8" path="res://art/Flowers/pansy_flower.png" id="4_penjn"]
 [ext_resource type="Texture2D" uid="uid://c2ws3ywfndfck" path="res://art/Flowers/sunflower.png" id="5_bs51t"]
+[ext_resource type="Texture2D" uid="uid://d33445bmjvk42" path="res://art/Flowers/mini/miniforgetmenots.png" id="5_n6252"]
+[ext_resource type="Texture2D" uid="uid://dke31nki5sna5" path="res://art/Flowers/mini/minisunflower.png" id="8_yvp2k"]
 
 [sub_resource type="TileSet" id="TileSet_cx5u4"]
 
@@ -15,21 +18,66 @@ texture_filter = 1
 position = Vector2(394, 340)
 scale = Vector2(2, 2)
 texture = ExtResource("1_cx5u4")
+metadata/_edit_lock_ = true
 
 [node name="DasiyFlower" type="Sprite2D" parent="Fullgrasspiece" unique_id=985293504]
+visible = false
 texture = ExtResource("2_qojho")
+
+[node name="Minidaisy" type="Sprite2D" parent="Fullgrasspiece/DasiyFlower" unique_id=1875645196]
+position = Vector2(31.5, 31)
+texture = ExtResource("3_penjn")
+
+[node name="Minidaisy2" type="Sprite2D" parent="Fullgrasspiece/DasiyFlower" unique_id=1647795218]
+position = Vector2(42, -15.5)
+texture = ExtResource("3_penjn")
+
+[node name="Minidaisy3" type="Sprite2D" parent="Fullgrasspiece/DasiyFlower" unique_id=1860804074]
+position = Vector2(-34, -32.5)
+texture = ExtResource("3_penjn")
+
+[node name="Minidaisy4" type="Sprite2D" parent="Fullgrasspiece/DasiyFlower" unique_id=687810866]
+position = Vector2(-29.5, 35.5)
+texture = ExtResource("3_penjn")
 
 [node name="Forgetmenots" type="Sprite2D" parent="Fullgrasspiece" unique_id=1139715953]
 visible = false
 texture = ExtResource("3_77o53")
+
+[node name="Miniforgetmenots" type="Sprite2D" parent="Fullgrasspiece/Forgetmenots" unique_id=373362401]
+position = Vector2(-24.5, 28.5)
+texture = ExtResource("5_n6252")
+
+[node name="Miniforgetmenots2" type="Sprite2D" parent="Fullgrasspiece/Forgetmenots" unique_id=74803242]
+position = Vector2(39.5, 16.5)
+texture = ExtResource("5_n6252")
+
+[node name="Miniforgetmenots3" type="Sprite2D" parent="Fullgrasspiece/Forgetmenots" unique_id=1824388515]
+position = Vector2(-29.5, -33)
+texture = ExtResource("5_n6252")
 
 [node name="PansyFlower" type="Sprite2D" parent="Fullgrasspiece" unique_id=1574430559]
 visible = false
 texture = ExtResource("4_penjn")
 
 [node name="Sunflower" type="Sprite2D" parent="Fullgrasspiece" unique_id=506842668]
-visible = false
 texture = ExtResource("5_bs51t")
+
+[node name="Minisunflower" type="Sprite2D" parent="Fullgrasspiece/Sunflower" unique_id=2134547813]
+position = Vector2(35, 31.5)
+texture = ExtResource("8_yvp2k")
+
+[node name="Minisunflower2" type="Sprite2D" parent="Fullgrasspiece/Sunflower" unique_id=1179856335]
+position = Vector2(43, -34.5)
+texture = ExtResource("8_yvp2k")
+
+[node name="Minisunflower3" type="Sprite2D" parent="Fullgrasspiece/Sunflower" unique_id=1009440851]
+position = Vector2(-37, -23)
+texture = ExtResource("8_yvp2k")
+
+[node name="Minisunflower4" type="Sprite2D" parent="Fullgrasspiece/Sunflower" unique_id=880154955]
+position = Vector2(-23, 37)
+texture = ExtResource("8_yvp2k")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1520970510]
 position = Vector2(1, -1)
