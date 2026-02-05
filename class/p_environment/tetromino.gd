@@ -1,8 +1,9 @@
 extends GridContainer
-const flower1 = preload("res://art/Flowers/daisy.png")
-const flower2 = preload("res://art/Flowers/forgetmenots.png")
-const flower3 = preload("res://art/Flowers/pansy_flower.png")
-const flower4 = preload("res://art/Flowers/sunflower.png")
+const flower1 = preload("res://class/resources/RDaisy.tscn")
+const flower2 = preload("res://class/resources/RForgetMeNot.tscn")
+const flower3 = preload("res://class/resources/RPansy.tscn")
+const flower4 = preload("res://class/resources/RSunflower.tscn")
+var focused = false
 
 var tetromino_type = 0 
 # 0 = square 
@@ -83,7 +84,11 @@ func generated():
 		print(abled[i2])
 		for child in abled[i2].get_children():
 			if child is Sprite2D:
-				child.get_child(0).texture = photos[array1[i2]]
+				var instance = photos[array1[i2]].instantiate()
+				child.add_child(instance)
+				instance.position = Vector2(0,0)
+				#for i3 in child.get_children:
+					#i3.position = Vector2(0,0)
 
 
 
@@ -95,3 +100,13 @@ func disabling(path: Node):
 				child2.set_deferred("disabled",true)
 		if child is Sprite2D:
 			child.visible = false
+
+
+func _on_area_2d_mouse_entered() -> void:
+	focused = true
+	while focused == true:
+		await get_tree().create_timer(1/120).timeout
+
+
+func _on_area_2d_mouse_exited() -> void:
+	focused = false

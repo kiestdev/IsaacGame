@@ -110,6 +110,9 @@ sources/0 = SubResource("TileSetAtlasSource_yxp60")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
 size = Vector2(112, 112)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33jdf"]
+size = Vector2(256, 512)
+
 [node name="TetrominoGen" type="Node2D" unique_id=1993780603]
 
 [node name="tetromino" type="GridContainer" parent="." unique_id=1810432864]
@@ -244,7 +247,7 @@ layout_mode = 2
 [node name="sprite6" type="Sprite2D" parent="tetromino/6" unique_id=1162396088]
 position = Vector2(64, 64)
 
-[node name="flower5" type="Sprite2D" parent="tetromino/6/sprite6" unique_id=1550358160]
+[node name="flower6" type="Sprite2D" parent="tetromino/6/sprite6" unique_id=1550358160]
 
 [node name="Area6" type="Area2D" parent="tetromino/6" unique_id=1568361676]
 
@@ -267,3 +270,10 @@ position = Vector2(64, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tetromino/7/Area7" unique_id=820288627]
 position = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=282783151]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1969378866]
+position = Vector2(128, 256)
+shape = SubResource("RectangleShape2D_33jdf")
+debug_color = Color(0, 0.6399731, 0.36145106, 0.41960785)

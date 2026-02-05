@@ -21,7 +21,7 @@ public partial class MainMenu : Control
 		GetTree().ChangeSceneToFile(("res://class/p_environment/world.tscn"));
 	}
 
-	public async void _on_quit_pressed()
+	public void _on_quit_pressed()
     {
 		GetTree().Quit();
 		GD.Print("printed");
