@@ -22,8 +22,8 @@ var photos = [flower1,flower2,flower3,flower4]
 var abled
 
 func _ready() -> void:
-	for child in $".".get_children():
-		child.custom_minimum_size = Vector2(128,128)
+	#for child in $".".get_children():
+		#child.custom_minimum_size = Vector2(128,128)
 	tetromino_type = randi() % 6
 	print(tetromino_type)
 	generated()
@@ -38,36 +38,43 @@ func generated():
 		disabling($"6")
 		disabling($"7")
 		abled = [$"1",$"2",$"3",$"4"]
+		$square.visible = true
 	if tetromino_type == 1:
 		disabling($"2")
 		disabling($"6")
 		disabling($"7")
 		abled = [$"1",$"3",$"4",$"5"]
+		$T.visible = true
 	if tetromino_type == 3:
 		disabling($"1")
 		disabling($"3")
 		disabling($"7")
 		abled = [$"2",$"4",$"5",$"6"]
+		$RevL.visible = true
 	if tetromino_type == 4:
 		disabling($"2")
 		disabling($"5")
 		disabling($"7")
 		abled = [$"1",$"3",$"4",$"6"]
+		$Squig.visible = true
 	if tetromino_type == 5:
 		disabling($"1")
 		disabling($"6")
 		disabling($"7")
 		abled = [$"2",$"3",$"4",$"5"]
+		$RevSquig.visible = true
 	if tetromino_type == 6:
 		disabling($"2")
 		disabling($"4")
 		disabling($"6")
 		abled = [$"1",$"3",$"5",$"7"]
+		$Line.visible = true
 	if tetromino_type == 2:
 		disabling($"2")
 		disabling($"4")
 		disabling($"7")
 		abled = [$"1",$"3",$"5",$"6"]
+		$L.visible = true
 	var i1 =0
 	for i in abled:
 		var i2 = i1
