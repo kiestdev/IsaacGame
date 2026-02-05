@@ -2,12 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="1_cx5u4"]
 [ext_resource type="Texture2D" uid="uid://coe5v68jhs5ve" path="res://art/Flowers/daisy.png" id="2_qojho"]
-[ext_resource type="Texture2D" uid="uid://67n2hw6gpfdv" path="res://art/Flowers/forgetmenots.png" id="3_77o53"]
+[ext_resource type="Texture2D" uid="uid://bcim51fw2t0l" path="res://art/Flowers/forgetmenots.png" id="3_77o53"]
 [ext_resource type="Texture2D" uid="uid://bmwpe0cblh6n" path="res://art/Flowers/mini/minidaisy.png" id="3_penjn"]
 [ext_resource type="Texture2D" uid="uid://dotyxp2m80wr8" path="res://art/Flowers/pansy_flower.png" id="4_penjn"]
 [ext_resource type="Texture2D" uid="uid://c2ws3ywfndfck" path="res://art/Flowers/sunflower.png" id="5_bs51t"]
 [ext_resource type="Texture2D" uid="uid://d33445bmjvk42" path="res://art/Flowers/mini/miniforgetmenots.png" id="5_n6252"]
-[ext_resource type="Texture2D" uid="uid://dyhy5k1wts10c" path="res://art/Flowers/mini/minisunflower.png" id="8_yvp2k"]
+[ext_resource type="Texture2D" uid="uid://dke31nki5sna5" path="res://art/Flowers/mini/minisunflower.png" id="8_yvp2k"]
+[ext_resource type="Texture2D" uid="uid://2nhwlunms00c" path="res://art/Flowers/mini/minipansy.png" id="9_bs51t"]
 
 [node name="world" type="Node" unique_id=1686023522]
 
@@ -101,6 +102,7 @@ position = Vector2(-29.5, 35.5)
 texture = ExtResource("3_penjn")
 
 [node name="Forgetmenots" type="Sprite2D" parent="Fullgrasspiece5" unique_id=1197384109]
+visible = false
 texture = ExtResource("3_77o53")
 
 [node name="Miniforgetmenots" type="Sprite2D" parent="Fullgrasspiece5/Forgetmenots" unique_id=1410347704]
@@ -116,8 +118,23 @@ position = Vector2(-29.5, -33)
 texture = ExtResource("5_n6252")
 
 [node name="PansyFlower" type="Sprite2D" parent="Fullgrasspiece5" unique_id=937503471]
-visible = false
 texture = ExtResource("4_penjn")
+
+[node name="Minipansy" type="Sprite2D" parent="Fullgrasspiece5/PansyFlower" unique_id=383782349]
+position = Vector2(32, 36)
+texture = ExtResource("9_bs51t")
+
+[node name="Minipansy2" type="Sprite2D" parent="Fullgrasspiece5/PansyFlower" unique_id=858583652]
+position = Vector2(42, -17)
+texture = ExtResource("9_bs51t")
+
+[node name="Minipansy3" type="Sprite2D" parent="Fullgrasspiece5/PansyFlower" unique_id=1178042919]
+position = Vector2(-38, 20)
+texture = ExtResource("9_bs51t")
+
+[node name="Minipansy4" type="Sprite2D" parent="Fullgrasspiece5/PansyFlower" unique_id=1216896550]
+position = Vector2(-15, -42)
+texture = ExtResource("9_bs51t")
 
 [node name="Sunflower" type="Sprite2D" parent="Fullgrasspiece5" unique_id=2098016049]
 visible = false
