@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://67n2hw6gpfdv" path="res://art/Flowers/forgetmenots.png" id="1_5x7q8"]
 [ext_resource type="Texture2D" uid="uid://d33445bmjvk42" path="res://art/Flowers/mini/miniforgetmenots.png" id="2_3xcdi"]
 
-[node name="Node" type="Node" unique_id=1646686639]
+[node name="Node" type="Node2D" unique_id=1209541941]
 
 [node name="Forgetmenots" type="Sprite2D" parent="." unique_id=1299405933]
 texture_filter = 1

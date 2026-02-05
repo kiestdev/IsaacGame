@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://coe5v68jhs5ve" path="res://art/Flowers/daisy.png" id="1_5035k"]
 [ext_resource type="Texture2D" uid="uid://bmwpe0cblh6n" path="res://art/Flowers/mini/minidaisy.png" id="2_e7b1l"]
 
-[node name="Node" type="Node" unique_id=173035963]
+[node name="Node" type="Node2D" unique_id=740324487]
 
 [node name="DasiyFlower" type="Sprite2D" parent="." unique_id=407687892]
 texture_filter = 1

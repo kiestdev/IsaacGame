@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c2ws3ywfndfck" path="res://art/Flowers/sunflower.png" id="1_svfla"]
 [ext_resource type="Texture2D" uid="uid://dyhy5k1wts10c" path="res://art/Flowers/mini/minisunflower.png" id="2_ikrfm"]
 
-[node name="Node" type="Node" unique_id=816607582]
+[node name="Node" type="Node2D" unique_id=905533588]
 
 [node name="Sunflower" type="Sprite2D" parent="." unique_id=206726495]
 texture_filter = 1

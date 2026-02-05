@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dotyxp2m80wr8" path="res://art/Flowers/pansy_flower.png" id="1_ysnce"]
 [ext_resource type="Texture2D" uid="uid://2nhwlunms00c" path="res://art/Flowers/mini/minipansy.png" id="2_t1hyh"]
 
-[node name="RPansy" type="Node" unique_id=1671273186]
+[node name="RPansy" type="Node2D" unique_id=820988882]
 
 [node name="PansyFlower" type="Sprite2D" parent="." unique_id=1075312680]
 texture_filter = 1
