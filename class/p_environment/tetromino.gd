@@ -1,7 +1,8 @@
 extends GridContainer
-const flower1 = preload("res://flowers/peach-flowers.jpg")
-const flower2 = preload("res://flowers/red-rose-flowers-840x473.jpg")
-const flower3 = preload("res://flowers/v4_Just-Happy-24090922502.jpg")
+const flower1 = preload("res://art/Flowers/daisy.png")
+const flower2 = preload("res://art/Flowers/forgetmenots.png")
+const flower3 = preload("res://art/Flowers/pansy_flower.png")
+const flower4 = preload("res://art/Flowers/sunflower.png")
 
 var tetromino_type = 0 
 # 0 = square 
@@ -12,12 +13,12 @@ var tetromino_type = 0
 # 5 = Rev squig -|_
 # 6 = line
 #lass flower:
-var one = randi() % 2
-var two = randi() % 2
-var three = randi() % 2
-var four = randi() % 2
+var one = randi() % 3
+var two = randi() % 3
+var three = randi() % 3
+var four = randi() % 3
 var array1 = [one,two,three,four]
-var photos = [flower1,flower2,flower3]
+var photos = [flower1,flower2,flower3,flower4]
 var abled
 
 func _ready() -> void:
