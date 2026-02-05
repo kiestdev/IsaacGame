@@ -1,19 +1,20 @@
 [gd_scene format=3 uid="uid://d1rhjk4m8n8"]
 
-[ext_resource type="Script" uid="uid://b4o00nmgr6uq2" path="res://tetromino.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://c3o6lljuaqv38" path="res://icon.svg" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://doxm4psqntiv0" path="res://flowers/v4_Just-Happy-24090922502.jpg" id="3_epypp"]
+[ext_resource type="Script" uid="uid://crhehoy8kx0m1" path="res://class/p_environment/tetromino.gd" id="1_33jdf"]
+[ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="2_yxp60"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(128, 128)
+size = Vector2(112, 112)
 
 [node name="TetrominoGen" type="Node2D" unique_id=1993780603]
 
 [node name="tetromino" type="GridContainer" parent="." unique_id=1810432864]
 offset_right = 260.0
 offset_bottom = 524.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
 columns = 2
-script = ExtResource("1_0e48y")
+script = ExtResource("1_33jdf")
 
 [node name="1" type="Panel" parent="tetromino" unique_id=1736430427]
 self_modulate = Color(1, 1, 1, 0)
@@ -22,10 +23,9 @@ layout_mode = 2
 
 [node name="sprite1" type="Sprite2D" parent="tetromino/1" unique_id=1905718013]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/1/sprite1" unique_id=2083464298]
-texture = ExtResource("3_epypp")
+[node name="flower1" type="Sprite2D" parent="tetromino/1/sprite1" unique_id=2083464298]
 
 [node name="Area1" type="Area2D" parent="tetromino/1" unique_id=705086210]
 
@@ -40,10 +40,9 @@ layout_mode = 2
 
 [node name="sprite2" type="Sprite2D" parent="tetromino/2" unique_id=953887763]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/2/sprite2" unique_id=2043433375]
-texture = ExtResource("3_epypp")
+[node name="flower2" type="Sprite2D" parent="tetromino/2/sprite2" unique_id=2043433375]
 
 [node name="Area2" type="Area2D" parent="tetromino/2" unique_id=57904424]
 
@@ -58,10 +57,9 @@ layout_mode = 2
 
 [node name="sprite3" type="Sprite2D" parent="tetromino/3" unique_id=773950616]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/3/sprite3" unique_id=1909909011]
-texture = ExtResource("3_epypp")
+[node name="flower3" type="Sprite2D" parent="tetromino/3/sprite3" unique_id=1909909011]
 
 [node name="Area3" type="Area2D" parent="tetromino/3" unique_id=1379035327]
 
@@ -76,10 +74,9 @@ layout_mode = 2
 
 [node name="sprite4" type="Sprite2D" parent="tetromino/4" unique_id=1564914107]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/4/sprite4" unique_id=463996009]
-texture = ExtResource("3_epypp")
+[node name="flower4" type="Sprite2D" parent="tetromino/4/sprite4" unique_id=463996009]
 
 [node name="Area4" type="Area2D" parent="tetromino/4" unique_id=2118683167]
 
@@ -92,12 +89,11 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 
-[node name="sprite4" type="Sprite2D" parent="tetromino/5" unique_id=1466965650]
+[node name="sprite5" type="Sprite2D" parent="tetromino/5" unique_id=1466965650]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/5/sprite4" unique_id=113174162]
-texture = ExtResource("3_epypp")
+[node name="flower5" type="Sprite2D" parent="tetromino/5/sprite5" unique_id=113174162]
 
 [node name="Area5" type="Area2D" parent="tetromino/5" unique_id=1216002690]
 
@@ -110,12 +106,11 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(37.875, 47.42)
 layout_mode = 2
 
-[node name="sprite4" type="Sprite2D" parent="tetromino/6" unique_id=1162396088]
+[node name="sprite6" type="Sprite2D" parent="tetromino/6" unique_id=1162396088]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/6/sprite4" unique_id=1550358160]
-texture = ExtResource("3_epypp")
+[node name="flower5" type="Sprite2D" parent="tetromino/6/sprite6" unique_id=1550358160]
 
 [node name="Area6" type="Area2D" parent="tetromino/6" unique_id=1568361676]
 
@@ -128,12 +123,11 @@ self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(37.875, 47.42)
 layout_mode = 2
 
-[node name="sprite4" type="Sprite2D" parent="tetromino/7" unique_id=1186823370]
+[node name="sprite7" type="Sprite2D" parent="tetromino/7" unique_id=1186823370]
 position = Vector2(64, 64)
-texture = ExtResource("2_epypp")
+texture = ExtResource("2_yxp60")
 
-[node name="Sprite2D" type="Sprite2D" parent="tetromino/7/sprite4" unique_id=1402891677]
-texture = ExtResource("3_epypp")
+[node name="flower7" type="Sprite2D" parent="tetromino/7/sprite7" unique_id=1402891677]
 
 [node name="Area7" type="Area2D" parent="tetromino/7" unique_id=573728068]
 

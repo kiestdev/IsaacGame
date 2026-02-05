@@ -2,12 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_7pak5"]
 [ext_resource type="Script" uid="uid://bq12jqirces6m" path="res://class/p_environment/MainMenu.cs" id="1_8adxl"]
+[ext_resource type="FontFile" uid="uid://cd66hosd4eoex" path="res://Assets/Font/dogica.otf" id="3_pkit3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_8adxl"]
 diffuse_texture = ExtResource("1_7pak5")
 
 [sub_resource type="LabelSettings" id="LabelSettings_pkit3"]
-font_size = 148
+font = ExtResource("3_pkit3")
+font_size = 108
 font_color = Color(0, 1, 0, 1)
 outline_size = 12
 outline_color = Color(0, 0.4745098, 0, 1)
@@ -42,10 +44,10 @@ text = "dont play botanibox"
 
 [node name="Label" type="Label" parent="." unique_id=116041236]
 layout_mode = 0
-offset_left = -363.0
-offset_top = -263.0
-offset_right = 363.0
-offset_bottom = -60.0
+offset_left = -462.0
+offset_top = -251.0
+offset_right = 870.0
+offset_bottom = -48.0
 text = "botanibox"
 label_settings = SubResource("LabelSettings_pkit3")
 
