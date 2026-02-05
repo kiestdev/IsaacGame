@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dppsykipp8dfd"]
+
+[ext_resource type="Texture2D" uid="uid://67n2hw6gpfdv" path="res://art/Flowers/forgetmenots.png" id="1_5x7q8"]
+[ext_resource type="Texture2D" uid="uid://d33445bmjvk42" path="res://art/Flowers/mini/miniforgetmenots.png" id="2_3xcdi"]
+
+[node name="Node" type="Node" unique_id=1646686639]
+
+[node name="Forgetmenots" type="Sprite2D" parent="." unique_id=1299405933]
+texture_filter = 1
+texture = ExtResource("1_5x7q8")
+
+[node name="Miniforgetmenots" type="Sprite2D" parent="Forgetmenots" unique_id=576264674]
+position = Vector2(-24.5, 28.5)
+texture = ExtResource("2_3xcdi")
+
+[node name="Miniforgetmenots2" type="Sprite2D" parent="Forgetmenots" unique_id=342194820]
+position = Vector2(39.5, 16.5)
+texture = ExtResource("2_3xcdi")
+
+[node name="Miniforgetmenots3" type="Sprite2D" parent="Forgetmenots" unique_id=1713975074]
+position = Vector2(-29.5, -33)
+texture = ExtResource("2_3xcdi")

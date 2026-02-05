@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b7lka61yx2hv4"]
+
+[ext_resource type="Texture2D" uid="uid://c2ws3ywfndfck" path="res://art/Flowers/sunflower.png" id="1_svfla"]
+[ext_resource type="Texture2D" uid="uid://dyhy5k1wts10c" path="res://art/Flowers/mini/minisunflower.png" id="2_ikrfm"]
+
+[node name="Node" type="Node" unique_id=816607582]
+
+[node name="Sunflower" type="Sprite2D" parent="." unique_id=206726495]
+texture_filter = 1
+texture = ExtResource("1_svfla")
+
+[node name="Minisunflower" type="Sprite2D" parent="Sunflower" unique_id=1212446564]
+texture_filter = 1
+position = Vector2(35, 31.5)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower2" type="Sprite2D" parent="Sunflower" unique_id=989652497]
+texture_filter = 1
+position = Vector2(43, -34.5)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower3" type="Sprite2D" parent="Sunflower" unique_id=1614954904]
+texture_filter = 1
+position = Vector2(-37, -23)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower4" type="Sprite2D" parent="Sunflower" unique_id=715076327]
+texture_filter = 1
+position = Vector2(-23, 37)
+texture = ExtResource("2_ikrfm")

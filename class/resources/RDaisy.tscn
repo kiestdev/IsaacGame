@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dopftff5fbefb"]
+
+[ext_resource type="Texture2D" uid="uid://coe5v68jhs5ve" path="res://art/Flowers/daisy.png" id="1_5035k"]
+[ext_resource type="Texture2D" uid="uid://bmwpe0cblh6n" path="res://art/Flowers/mini/minidaisy.png" id="2_e7b1l"]
+
+[node name="Node" type="Node" unique_id=173035963]
+
+[node name="DasiyFlower" type="Sprite2D" parent="." unique_id=407687892]
+texture_filter = 1
+texture = ExtResource("1_5035k")
+
+[node name="Minidaisy" type="Sprite2D" parent="DasiyFlower" unique_id=1858777202]
+position = Vector2(31.5, 31)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy2" type="Sprite2D" parent="DasiyFlower" unique_id=504688535]
+position = Vector2(42, -15.5)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy3" type="Sprite2D" parent="DasiyFlower" unique_id=2015048465]
+position = Vector2(-34, -32.5)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy4" type="Sprite2D" parent="DasiyFlower" unique_id=1748198092]
+position = Vector2(-29.5, 35.5)
+texture = ExtResource("2_e7b1l")
