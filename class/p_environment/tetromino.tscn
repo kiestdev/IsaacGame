@@ -40,6 +40,7 @@ size = Vector2(112, 112)
 
 [node name="TetrominoGen" type="Node2D" unique_id=1993780603]
 scale = Vector2(0.5, 0.5)
+metadata/placed = false
 
 [node name="tetromino" type="GridContainer" parent="." unique_id=1810432864]
 offset_right = 260.0
