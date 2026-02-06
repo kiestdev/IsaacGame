@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://5iqkdjssvn0x"]
-
-[ext_resource type="Script" uid="uid://bk3ryuv82rkfd" path="res://class/gc_economy/LShop.cs" id="1_ttxek"]
-
-[node name="LShop" type="Node2D" unique_id=684209442]
-position = Vector2(20.383179, 24.395355)
-script = ExtResource("1_ttxek")
