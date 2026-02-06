@@ -1,10 +1,7 @@
 [gd_scene format=4 uid="uid://d1rhjk4m8n8"]
 
 [ext_resource type="Script" uid="uid://crhehoy8kx0m1" path="res://class/p_environment/tetromino.gd" id="1_33jdf"]
-[ext_resource type="Texture2D" uid="uid://m2jn3tfyl5ms" path="res://art/grasstileset/grass tile_set.png" id="2_33jdf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_33jdf"]
-size = Vector2(256, 512)
+[ext_resource type="Texture2D" path="res://art/grasstileset/grass tile_set.png" id="2_33jdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxp60"]
 texture = ExtResource("2_33jdf")
@@ -122,13 +119,6 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 2
 script = ExtResource("1_33jdf")
-
-[node name="Area2D" type="Area2D" parent="tetromino" unique_id=282783151]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tetromino/Area2D" unique_id=1969378866]
-position = Vector2(128, 256)
-shape = SubResource("RectangleShape2D_33jdf")
-debug_color = Color(0.5473651, 0.56425804, 3.85046e-07, 0.41960785)
 
 [node name="square" type="TileMapLayer" parent="tetromino" unique_id=1022652010]
 visible = false
@@ -277,6 +267,3 @@ position = Vector2(64, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tetromino/7/Area7" unique_id=820288627]
 position = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_0hol4")
-
-[connection signal="mouse_entered" from="tetromino/Area2D" to="tetromino" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="tetromino/Area2D" to="tetromino" method="_on_area_2d_mouse_exited"]
