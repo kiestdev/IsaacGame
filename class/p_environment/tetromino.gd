@@ -104,18 +104,23 @@ func disabling(path: Node):
 		if child is Sprite2D:
 			child.visible = false
 
-
+var clicked = 0
+var pos_offset = Vector2(0,0)
 func _input(event):
-	if Input.is_action_pressed("click") and get_parent().get_meta("placed") == false:
-		print("clicked, ",event.position,", ",", ",global_position,", ",$".".get_parent().scale.x)
+	if Input.is_action_just_pressed("click") and get_parent().get_meta("placed") == false:
+		clicked += 1
+		if clicked > 1:
+			return
+		print("clicked")
 		if (event.position.x >= position.x and event.position.x <= (position.x + (256 * $".".get_parent().scale.x)))and(event.position.y >= position.y and event.position.y <= (position.y + (512 * $".".get_parent().scale.y))):
 			focused = true
-			print(focused)
 			while focused:
-				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale)
+				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale) + pos_offset
 				if Input.is_action_just_released("click"):#Input.is_action_just_pressed("click"):
 					focused = false
-					print(focused)
+				if Input.is_action_just_pressed("rotate"):
+					rotation += PI/2
+					pos_offset += Vector2(0,-256).rotated(rotation)
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				position = position.snapped(Vector2(128*cur_scale,128*cur_scale))
