@@ -120,7 +120,7 @@ func _input(event):
 					focused = false
 				if Input.is_action_just_pressed("rotate"):
 					rotation += PI/2
-					pos_offset += Vector2(0,-256).rotated(rotation)
+					pos_offset += Vector2(0,-256*cur_scale).rotated(rotation)
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				position = position.snapped(Vector2(128*cur_scale,128*cur_scale))
