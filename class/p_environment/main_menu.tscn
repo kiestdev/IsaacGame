@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_7pak5"]
 [ext_resource type="Script" uid="uid://bq12jqirces6m" path="res://class/p_environment/MainMenu.cs" id="1_8adxl"]
 [ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="3_nxqxv"]
-[ext_resource type="Texture2D" uid="uid://dndoew57v7t0y" path="res://art/ui/title.png" id="3_pkit3"]
+[ext_resource type="Texture2D" uid="uid://oxb443cd58p4" path="res://art/ui/title.png" id="3_pkit3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_8adxl"]
 diffuse_texture = ExtResource("1_7pak5")

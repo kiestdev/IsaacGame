@@ -1,13 +1,13 @@
 [gd_scene format=4 uid="uid://c6wn2l3abq0t3"]
 
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_choow"]
-[ext_resource type="Texture2D" uid="uid://m2jn3tfyl5ms" path="res://art/grasstileset/grass_tile_set.png" id="2_choow"]
+[ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="2_jqcfu"]
+[ext_resource type="PackedScene" uid="uid://5iqkdjssvn0x" path="res://class/gc_economy/LShop.tscn" id="3_a4g3j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqcfu"]
 resource_name = "Dirt!"
 texture = ExtResource("1_choow")
 texture_region_size = Vector2i(128, 128)
-0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -71,37 +71,11 @@ texture_region_size = Vector2i(128, 128)
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a4g3j"]
-texture = ExtResource("2_choow")
-texture_region_size = Vector2i(32, 32)
-1:2/0 = 0
-0:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-4:2/size_in_atlas = Vector2i(1, 2)
-4:2/0 = 0
-5:2/size_in_atlas = Vector2i(2, 1)
-5:2/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-5:0/0 = 0
-4:0/0 = 0
-2:0/size_in_atlas = Vector2i(2, 1)
-2:0/0 = 0
-2:1/size_in_atlas = Vector2i(2, 1)
-2:1/0 = 0
-3:2/size_in_atlas = Vector2i(1, 2)
-3:2/0 = 0
-2:2/size_in_atlas = Vector2i(1, 2)
-2:2/0 = 0
-0:0/size_in_atlas = Vector2i(2, 2)
 0:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cx5u4"]
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_jqcfu")
-sources/1 = SubResource("TileSetAtlasSource_a4g3j")
 
 [node name="world" type="Node" unique_id=1686023522]
 
@@ -109,11 +83,11 @@ sources/1 = SubResource("TileSetAtlasSource_a4g3j")
 position = Vector2(-2078, 0)
 
 [node name="ColorRect" type="ColorRect" parent="Level" unique_id=2129926863]
-offset_left = -607.0
-offset_top = -346.0
-offset_right = 596.0
-offset_bottom = 344.0
-color = Color(0.6156863, 1, 0.54509807, 1)
+offset_left = -602.0
+offset_top = -344.0
+offset_right = 601.0
+offset_bottom = 346.0
+color = Color(0.055283286, 0.29346424, 1.6364455e-06, 1)
 
 [node name="ItemContainer" type="GridContainer" parent="Level" unique_id=1365488212]
 anchors_preset = -1
@@ -133,9 +107,16 @@ texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Level" unique_id=1264865794]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAD+////AAAAAAAAAAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAAAAAD///3/AAAAAAAAAAD+//3/AAAAAAAAAAD9//3/AAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAD8//3/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAD7/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD8/wEAAAAAAAAAAAD8/wAAAAAAAAAAAAD8////AAAAAAAAAAD8//7/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD///3/AAAAAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAACAAAAAAAAAAAAAAABAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9//3/AAAAAAAAAAD8//3/AAAAAAAAAAD7//3/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD7/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_cx5u4")
 navigation_enabled = false
 
+[node name="TetrominoGen" parent="Level" unique_id=1993780603 instance=ExtResource("2_jqcfu")]
+scale = Vector2(0.5, 0.5)
+
 [node name="Shop" type="Node2D" parent="." unique_id=912659844]
 position = Vector2(985, -601)
+
+[node name="LShop" parent="Shop" unique_id=684209442 instance=ExtResource("3_a4g3j")]
+
+[editable path="Shop/LShop"]
