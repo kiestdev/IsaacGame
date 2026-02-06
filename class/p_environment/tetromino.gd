@@ -102,19 +102,6 @@ func disabling(path: Node):
 			child.visible = false
 
 
-func _on_area_2d_mouse_entered() -> void:
-	pass
-	#focused = true
-	#while focused == true:
-		#print(global_position,", ",get_global_mouse_position())
-		#global_position = get_global_mouse_position()
-		#await get_tree().create_timer(1.0/120).timeout
-
-
-func _on_area_2d_mouse_exited() -> void:
-	pass
-	#focused = false
-
 func _input(event):
 	if event is InputEventMouseButton:
 		if (event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)):
