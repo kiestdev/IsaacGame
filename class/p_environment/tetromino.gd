@@ -3,6 +3,7 @@ const flower1 = preload("res://class/resources/RDaisy.tscn")
 const flower2 = preload("res://class/resources/RForgetMeNot.tscn")
 const flower3 = preload("res://class/resources/RPansy.tscn")
 const flower4 = preload("res://class/resources/RSunflower.tscn")
+var cur_scale 
 var focused = false
 
 var tetromino_type = 0 
@@ -27,6 +28,7 @@ func _ready() -> void:
 		#child.custom_minimum_size = Vector2(128,128)
 	tetromino_type = randi() % 6
 	print(tetromino_type)
+	cur_scale = $".".get_parent().scale.x
 	generated()
 	#$"1/sprite1/Sprite2D".texture =flower1
 
@@ -103,14 +105,20 @@ func disabling(path: Node):
 
 
 func _input(event):
-	if event is InputEventMouseButton:
-		if (event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)):
-			focused = !focused
+	if Input.is_action_just_pressed("click"):
+		print("clicked, ",event.position,", ",", ",global_position,", ",$".".get_parent().scale.x)
+		if (event.position.x >= position.x and event.position.x <= (position.x + (256 * $".".get_parent().scale.x)))and(event.position.y >= position.y and event.position.y <= (position.y + (512 * $".".get_parent().scale.y))):
+			focused = true
 			print(focused)
 			while focused:
-				global_position = get_global_mouse_position() - Vector2(128.0,128)
+				global_position = get_global_mouse_position() - Vector2(128.0 * 0.5,128.0 * 0.5)
+				print("While")
+				if Input.is_action_just_released("click"):#Input.is_action_just_pressed("click"):
+					focused = false
+					print(focused)
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
+				print("if")
 				position = position.snapped(Vector2(128,128))
 		#print("Mouse Click/Unclick at: ", event.position)
 		#print((event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)))
