@@ -1,8 +1,9 @@
 extends GridContainer
-const flower1 = preload("res://art/Flowers/daisy.png")
-const flower2 = preload("res://art/Flowers/forgetmenots.png")
-const flower3 = preload("res://art/Flowers/pansy_flower.png")
-const flower4 = preload("res://art/Flowers/sunflower.png")
+const flower1 = preload("res://class/resources/RDaisy.tscn")
+const flower2 = preload("res://class/resources/RForgetMeNot.tscn")
+const flower3 = preload("res://class/resources/RPansy.tscn")
+const flower4 = preload("res://class/resources/RSunflower.tscn")
+var focused = false
 
 var tetromino_type = 0 
 # 0 = square 
@@ -83,7 +84,11 @@ func generated():
 		print(abled[i2])
 		for child in abled[i2].get_children():
 			if child is Sprite2D:
-				child.get_child(0).texture = photos[array1[i2]]
+				var instance = photos[array1[i2]].instantiate()
+				child.add_child(instance)
+				instance.position = Vector2(0,0)
+				#for i3 in child.get_children:
+					#i3.position = Vector2(0,0)
 
 
 
@@ -95,3 +100,17 @@ func disabling(path: Node):
 				child2.set_deferred("disabled",true)
 		if child is Sprite2D:
 			child.visible = false
+
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if (event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)):
+			focused = !focused
+			print(focused)
+			while focused:
+				global_position = get_global_mouse_position() - Vector2(128.0,128)
+				await get_tree().create_timer(1.0/120).timeout
+			if focused == false:
+				position = position.snapped(Vector2(128,128))
+		#print("Mouse Click/Unclick at: ", event.position)
+		#print((event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)))

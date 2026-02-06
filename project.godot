@@ -11,10 +11,14 @@ config_version=5
 [application]
 
 config/name="Botanibox"
-run/main_scene="uid://dvmv301ub0lox"
-config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
+run/main_scene="uid://bbhogx7wf6bo3"
+config/features=PackedStringArray("4.6", "C#")
 boot_splash/image="uid://cwrtsjwi0d2xg"
-config/icon="uid://csawgsh4foex8"
+
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
 
 [dotnet]
 
