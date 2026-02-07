@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://evuikspmxocv"]
+
+[ext_resource type="Script" uid="uid://kkquvs7geim1" path="res://class/gc_shop/PShopInterface.cs" id="1_iek3e"]
+
+[node name="PShopInterface" type="Control" unique_id=246581010]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iek3e")
+
+[node name="PUpperDiv" type="VBoxContainer" parent="." unique_id=1652725920]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 14.0
+offset_right = 163.0
+offset_bottom = 80.0
+
+[node name="BLeaveShop" type="Button" parent="PUpperDiv" unique_id=1026816840]
+layout_mode = 2
+text = "Leave Shop
+"
+
+[node name="USDCoinCt" type="HBoxContainer" parent="." unique_id=1817348745]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 16.0
+offset_right = 288.0
+offset_bottom = 48.0
+
+[node name="ROcoins" type="Label" parent="USDCoinCt" unique_id=1146384461]
+layout_mode = 2
+text = "Coins: "
+
+[node name="LCoins" type="Label" parent="USDCoinCt" unique_id=2030011131]
+layout_mode = 2
+text = "count"

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://lqatygc3vb5b"]
+
+[ext_resource type="Script" uid="uid://176jq6xm5am4" path="res://class/gc_shop/LShop.cs" id="1_ttxek"]
+[ext_resource type="PackedScene" uid="uid://evuikspmxocv" path="res://class/gc_shop/PShopInterface.tscn" id="2_kmhkp"]
+
+[node name="LShop" type="Node2D" unique_id=684209442]
+script = ExtResource("1_ttxek")
+
+[node name="PShopInterface" parent="." unique_id=246581010 instance=ExtResource("2_kmhkp")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
