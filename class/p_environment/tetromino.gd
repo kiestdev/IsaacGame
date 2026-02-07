@@ -118,12 +118,18 @@ func _input(event):
 				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale) + pos_offset
 				if Input.is_action_just_released("click"):#Input.is_action_just_pressed("click"):
 					focused = false
+					for chode in get_children():
+						if chode is TileMapLayer and chode.visible == true:
+							chode.get_child(0).visible = false
 				if Input.is_action_just_pressed("rotate"):
 					rotation += PI/2
 					pos_offset += Vector2(0,-256*cur_scale).rotated(rotation)
-					for chode in get_children():
-						if chode is TileMapLayer:
-							chode.get_child(0).position = chode.get_child(0).position.snapped(Vector2(128*cur_scale,128*cur_scale))
+				for chode in get_children():
+					if chode is TileMapLayer and chode.visible == true:
+						print(chode.get_child(0).global_position)
+						chode.get_child(0).position = Vector2.ZERO
+						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale))
+						print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				position = position.snapped(Vector2(128*cur_scale,128*cur_scale))
