@@ -1,8 +1,9 @@
-[gd_scene format=4 uid="uid://b6nu3sdrihw44"]
+[gd_scene format=4 uid="uid://qa4oj5a736bm"]
 
+[ext_resource type="Texture2D" uid="uid://rmab5c7jo1aa" path="res://art/bg.png" id="1_1te6x"]
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_y732a"]
 [ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="2_ul6te"]
-[ext_resource type="Texture2D" uid="uid://bfphgsda41q7a" path="res://art/items/gnome_fixed.png" id="3_y732a"]
+[ext_resource type="Texture2D" uid="uid://bfphgsda41q7a" path="res://art/gnome_fixed.png" id="3_y732a"]
 [ext_resource type="PackedScene" uid="uid://cr7xnaki7v02t" path="res://class/p_environment/level_ui.tscn" id="4_ul6te"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqcfu"]
@@ -81,13 +82,6 @@ sources/0 = SubResource("TileSetAtlasSource_jqcfu")
 [node name="LLevel" type="Node2D" unique_id=16523455]
 texture_filter = 1
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=646123032]
-offset_left = -602.0
-offset_top = -344.0
-offset_right = 601.0
-offset_bottom = 346.0
-color = Color(0.055283286, 0.29346424, 1.6364455e-06, 1)
-
 [node name="ItemContainer" type="GridContainer" parent="." unique_id=2044023020]
 anchors_preset = -1
 anchor_bottom = 0.5
@@ -98,6 +92,11 @@ offset_bottom = 266.66663
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
 columns = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="ItemContainer" unique_id=1476995302]
+position = Vector2(174.59258, -149.66667)
+scale = Vector2(0.6697531, 0.6697531)
+texture = ExtResource("1_1te6x")
 
 [node name="LevelMark" type="Marker2D" parent="." unique_id=1237231548]
 
