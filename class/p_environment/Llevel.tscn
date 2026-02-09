@@ -1,0 +1,129 @@
+[gd_scene format=4 uid="uid://qa4oj5a736bm"]
+
+[ext_resource type="Texture2D" uid="uid://rmab5c7jo1aa" path="res://art/bg.png" id="1_1te6x"]
+[ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_y732a"]
+[ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="2_ul6te"]
+[ext_resource type="Texture2D" uid="uid://bfphgsda41q7a" path="res://art/gnome_fixed.png" id="3_y732a"]
+[ext_resource type="PackedScene" uid="uid://cr7xnaki7v02t" path="res://class/p_environment/level_ui.tscn" id="4_ul6te"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqcfu"]
+resource_name = "Dirt!"
+texture = ExtResource("1_y732a")
+texture_region_size = Vector2i(128, 128)
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cx5u4"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_jqcfu")
+
+[node name="LLevel" type="Node2D" unique_id=16523455]
+texture_filter = 1
+
+[node name="ItemContainer" type="GridContainer" parent="." unique_id=2044023020]
+anchors_preset = -1
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 224.00002
+offset_right = 88.0
+offset_bottom = 266.66663
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+columns = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="ItemContainer" unique_id=1476995302]
+position = Vector2(174.59258, -149.66667)
+scale = Vector2(0.6697531, 0.6697531)
+texture = ExtResource("1_1te6x")
+
+[node name="LevelMark" type="Marker2D" parent="." unique_id=1237231548]
+
+[node name="Camera" type="Camera2D" parent="LevelMark" unique_id=1187648727]
+texture_filter = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1176502156]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAD///3/AAAAAAAAAAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAAAAP//AAAAAAAAAAAAAP7/AAAAAAAAAAACAAAAAAAAAAAAAAABAP7/AAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAACAP3/AAAAAAAAAAD+//3/AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9//3/AAAAAAAAAAD8//3/AAAAAAAAAAD7//3/AAAAAAAAAAD6//3/AAAAAAAAAAD6//7/AAAAAAAAAAD6////AAAAAAAAAAD6/wAAAAAAAAAAAAD6/wEAAAAAAAAAAAD6/wIAAAAAAAAAAAD7/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAAFAP3/AAAAAAAAAAAFAP7/AAAAAAAAAAAFAP//AAAAAAAAAAADAP3/AAAAAAAAAAADAP7/AAAAAAAAAAADAP//AAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAD8//7/AAAAAAAAAAD8////AAAAAAAAAAD8/wAAAAAAAAAAAAD8/wEAAAAAAAAAAAD7//7/AAAAAAAAAAD7////AAAAAAAAAAD7/wAAAAAAAAAAAAD7/wEAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_cx5u4")
+navigation_enabled = false
+
+[node name="TetrominoGen" parent="." unique_id=1993780603 instance=ExtResource("2_ul6te")]
+texture_filter = 1
+position = Vector2(128, -192)
+scale = Vector2(0.5, 0.5)
+
+[node name="BigCoin" type="Sprite2D" parent="." unique_id=1718631152]
+position = Vector2(402, -129)
+scale = Vector2(420, 186)
+
+[node name="GnomeFixed" type="Sprite2D" parent="." unique_id=741176872]
+position = Vector2(304, 16)
+texture = ExtResource("3_y732a")
+
+[node name="Level UI" parent="." unique_id=726885060 instance=ExtResource("4_ul6te")]
+offset_left = -576.0
+offset_top = -320.0
+offset_right = -576.0
+offset_bottom = -320.0
