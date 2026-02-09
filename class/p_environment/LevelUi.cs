@@ -15,7 +15,7 @@ public partial class LevelUi : Control
 
 	public void _on_modeswitch_toggled(bool toggled)
 	{
-		GetNode<HBoxContainer>("ItemHolder/Itemflow").Visible = !toggled;
-		GetNode<HBoxContainer>("ItemHolder/PowerFlow").Visible = toggled;
+		GetNode<Node2D>("ItemHolder/Itemflow").Visible = !toggled;
+		GetNode<Node2D>("ItemHolder/PowerFlow").Visible = toggled;
 	}
 }
