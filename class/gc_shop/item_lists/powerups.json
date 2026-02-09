@@ -1,0 +1,7 @@
+[
+  {"ID": 0,"name": "Garden Gnome","sprite": "res://art/gnome.png","price":4},
+  {"ID": 1,"name": "Fountain","sprite": "res://art/Big_coin_fixed.png","price": 7},
+  {"ID": 2,"name": "Fertilizer Bag","sprite": "res://art/fretalizer.png","price":5},
+  {"ID": 3,"name": "Leaf-Blower","sprite": "res://art/items/leafblower.png","price":4},
+  {"ID": 4,"name": "Lawn Chair","sprite": "res://art/items/lawnchair.png","price":7}
+  ]
