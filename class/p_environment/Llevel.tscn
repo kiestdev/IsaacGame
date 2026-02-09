@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://rmab5c7jo1aa" path="res://art/bg.png" id="1_1te6x"]
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_y732a"]
 [ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="2_ul6te"]
-[ext_resource type="Texture2D" uid="uid://bfphgsda41q7a" path="res://art/gnome_fixed.png" id="3_y732a"]
+[ext_resource type="Texture2D" uid="uid://3dtmwxmndu5p" path="res://art/gnome_fixed.png" id="3_y732a"]
 [ext_resource type="PackedScene" uid="uid://cr7xnaki7v02t" path="res://class/p_environment/level_ui.tscn" id="4_ul6te"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqcfu"]

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://c3xx5qqlb32vf"]
+
+[ext_resource type="Script" uid="uid://c8geea15ag5vw" path="res://class/resources/ItemHolder.cs" id="1_f0fhf"]
+[ext_resource type="Texture2D" uid="uid://dsiafuoa6enu2" path="res://art/Big_coin_fixed.png" id="2_6d865"]
+[ext_resource type="Texture2D" uid="uid://b2xorynabivf1" path="res://art/ui/StartQuitButton.png" id="2_f0fhf"]
+[ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="3_6d865"]
+[ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="4_cjf62"]
+[ext_resource type="Texture2D" uid="uid://c4mruwlr7h830" path="res://art/ui/itembox.png" id="5_6d865"]
+
+[node name="ItemHolder" type="Control" unique_id=991844908]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 48)
+layout_mode = 3
+anchor_left = -0.028
+anchor_top = -0.025
+anchor_right = 0.028
+anchor_bottom = 0.049000002
+offset_left = 0.25600052
+offset_top = 0.20000076
+offset_right = -0.25600052
+offset_bottom = 0.24799919
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f0fhf")
+metadata/texVal = "LeafBlower"
+
+[node name="Itemsprite" type="Sprite2D" parent="." unique_id=1204451733]
+position = Vector2(32, 20)
+texture = ExtResource("2_6d865")
+
+[node name="Tooltip" type="Node2D" parent="." unique_id=224137189]
+position = Vector2(32, -16)
+
+[node name="DescBox" type="Sprite2D" parent="Tooltip" unique_id=157532506]
+position = Vector2(-3.8146973e-06, -4.000002)
+scale = Vector2(0.44268772, 0.375)
+texture = ExtResource("2_f0fhf")
+
+[node name="DescTex" type="Label" parent="Tooltip" unique_id=1641254857]
+offset_left = -56.0
+offset_top = -28.0
+offset_right = 56.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("3_6d865")
+theme_override_font_sizes/font_size = 8
+text = "This is where the items description will go!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NameBox" type="Sprite2D" parent="Tooltip" unique_id=1587164795]
+position = Vector2(0, -43.999996)
+rotation = 3.1415927
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_6d865")
+
+[node name="NameTex" type="Label" parent="Tooltip" unique_id=983323420]
+offset_left = -36.0
+offset_top = -56.0
+offset_right = 36.0
+offset_bottom = -32.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("4_cjf62")
+theme_override_font_sizes/font_size = 10
+text = "Itemnam"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="." unique_id=204395001]
+anchors_preset = 0
+offset_left = 8.0
+offset_right = 56.0
+offset_bottom = 40.0
+
+[connection signal="mouse_entered" from="Control" to="." method="_on_control_mouse_entered"]
+[connection signal="mouse_exited" from="Control" to="." method="_on_control_mouse_exited"]
