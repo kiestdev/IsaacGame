@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://cr7xnaki7v02t"]
+
+[ext_resource type="Texture2D" uid="uid://cy7pnf0b4dgiw" path="res://art/ui/Big_coin_fixed.png" id="1_1la40"]
+[ext_resource type="Texture2D" uid="uid://cl12fp2vr1sj3" path="res://art/ui/textbox.png" id="2_5ud74"]
+[ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="3_56b3f"]
+[ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="4_tohe0"]
+[ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="5_y33wi"]
+
+[node name="Level UI" type="Control" unique_id=726885060]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BigCoinFixed" type="Sprite2D" parent="." unique_id=963863014]
+position = Vector2(1040, 247)
+texture = ExtResource("1_1la40")
+
+[node name="Textbox" type="Sprite2D" parent="." unique_id=1796160188]
+position = Vector2(539, 568)
+scale = Vector2(2.1406248, 0.46874988)
+texture = ExtResource("2_5ud74")
+
+[node name="Textbox2" type="Sprite2D" parent="." unique_id=153946579]
+position = Vector2(431, 60)
+scale = Vector2(1.5806247, 0.46874988)
+texture = ExtResource("2_5ud74")
+
+[node name="Textbox3" type="Sprite2D" parent="." unique_id=41474905]
+position = Vector2(847, 60)
+scale = Vector2(0.2606343, 0.46874988)
+texture = ExtResource("2_5ud74")
+
+[node name="Label2" type="Label" parent="." unique_id=1084132873]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 36.0
+offset_right = 867.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0.47089893, 0.26471207, 0.0962935, 1)
+theme_override_fonts/font = ExtResource("3_56b3f")
+theme_override_font_sizes/font_size = 11
+text = "Tiles"
+
+[node name="Button" type="Button" parent="Label2" unique_id=1414471645]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 140.0
+offset_bottom = 152.0
+scale = Vector2(0.25, 0.25)
+icon = ExtResource("4_tohe0")
+flat = true
+
+[node name="Label" type="Label" parent="Label2" unique_id=937893056]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("5_y33wi")
+theme_override_font_sizes/font_size = 10
+text = "16"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=883361540]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 548.0
+offset_right = 235.0
+offset_bottom = 564.0
+theme_override_colors/font_color = Color(0.47089893, 0.26471207, 0.0962935, 1)
+theme_override_fonts/font = ExtResource("3_56b3f")
+theme_override_font_sizes/font_size = 9
+text = "Items"
+
+[node name="TextEdit" type="TextEdit" parent="Label" unique_id=1383286246]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 40.0
+placeholder_text = "0/5"
+
+[node name="CheckButton" type="CheckButton" parent="." unique_id=872246823]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 556.0
+offset_right = 895.0
+offset_bottom = 588.0
