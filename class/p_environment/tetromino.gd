@@ -35,7 +35,6 @@ func _ready() -> void:
 
 
 
-
 func generated():
 	if tetromino_type == 0:
 		disabling($"5")
