@@ -108,11 +108,18 @@ var clicked = 0
 var pos_offset = Vector2(0,0)
 func _input(event):
 	if Input.is_action_just_pressed("click") and get_parent().get_meta("placed") == false:
-		clicked += 1
-		if clicked > 1:
-			return
-		print("clicked")
-		if (event.position.x >= position.x and event.position.x <= (position.x + (256 * $".".get_parent().scale.x)))and(event.position.y >= position.y and event.position.y <= (position.y + (512 * $".".get_parent().scale.y))):
+		print(event.position.x)
+		print(global_position.x,", ",(global_position.x + (256 * $".".get_parent().scale.x)))
+		print((event.position.x >= global_position.x and event.position.x <= (global_position.x + (256 * $".".get_parent().scale.x))))
+		print(event.position.y)
+		print(global_position.y,", ",(global_position.y + (512 * $".".get_parent().scale.y)))
+		print((event.position.y >= global_position.y and event.position.y <= (global_position.y + (512 * $".".get_parent().scale.y))))
+		if (event.position.x >= global_position.x and event.position.x <= (global_position.x + (256 * $".".get_parent().scale.x)))and(event.position.y >= global_position.y and event.position.y <= (global_position.y + (512 * $".".get_parent().scale.y))):
+			clicked += 1
+			if clicked > 1:
+				return
+			print("clicked")
+			print("focused")
 			focused = true
 			while focused:
 				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale) + pos_offset

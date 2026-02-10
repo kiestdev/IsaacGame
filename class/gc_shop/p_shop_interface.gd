@@ -36,11 +36,17 @@ func run_powerups():
 		else:
 			rand = randi() % 4
 		#var texture1 = preload(powerups[rand]['sprite'])
-		if child is Control and not child is BoxContainer:
-			child.get_child(1).text = powerups[rand]['name']
-			child.get_child(2).text = str(int(powerups[rand]['price']))
-			child.get_child(0).texture = load(powerups[rand]['sprite'])
-			ButtonList[rand].set_meta("item_id",powerups[rand]['ID']) ##fix_this
+		if child is Control and not child is BoxContainer and not child is Button:
+			if child.get_meta("item") == true and child is Control and not child is BoxContainer:
+				child.get_child(1).text = items[rand]['name']
+				child.get_child(2).text = str(int(items[rand]['price']))
+				child.get_child(0).texture = load(items[rand]['sprite'])
+				ButtonList[rand].set_meta("item_id",items[rand]['ID']) ##fix_this
+			else:
+				child.get_child(1).text = powerups[rand]['name']
+				child.get_child(2).text = str(int(powerups[rand]['price']))
+				child.get_child(0).texture = load(powerups[rand]['sprite'])
+				ButtonList[rand].set_meta("item_id",powerups[rand]['ID'])
 			#var purchased = false
 			#if child.get_child(3) is Button:
 				#await child.get_child(3).button_down

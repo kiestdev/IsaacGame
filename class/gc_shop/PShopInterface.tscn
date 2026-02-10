@@ -163,7 +163,9 @@ data = PackedByteArray("T1RUTwALAIAAAwAwQ0ZGIFgDW3UAADssAABIXEZGVE2P4VtgAACDpAAA
 font_name = "Dogica"
 style_name = "Regular"
 font_style = 4
+subpixel_positioning = 0
 msdf_pixel_range = 8
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -1533,3 +1535,11 @@ offset_right = 97.0
 offset_bottom = -8.0
 flat = true
 metadata/item_id = 0
+
+[node name="Button2" type="Button" parent="." unique_id=1929001697]
+layout_mode = 0
+offset_left = 305.0
+offset_top = -241.0
+offset_right = 396.0
+offset_bottom = -151.0
+text = "reroll"

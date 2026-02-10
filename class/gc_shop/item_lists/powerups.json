@@ -1,7 +1,12 @@
 [
-  {"ID": 0,"name": "Garden Gnome","sprite": "res://art/gnome.png","price":4},
-  {"ID": 1,"name": "Fountain","sprite": "res://art/Big_coin_fixed.png","price": 7},
-  {"ID": 2,"name": "Fertilizer Bag","sprite": "res://art/fretalizer.png","price":5},
-  {"ID": 3,"name": "Leaf-Blower","sprite": "res://art/items/leafblower.png","price":4},
-  {"ID": 4,"name": "Lawn Chair","sprite": "res://art/items/lawnchair.png","price":7}
+  {"ID": 5,"name": "Wasp","sprite": "res://art/Powerups/wasp.png","price":3},
+  {"ID": 6,"name": "Honey Bee","sprite": "res://art/Powerups/bee_small.png","price":1},
+{"ID": 7,"name": "Bumble Bee","sprite": "res://art/Powerups/bee_big.png","price":4},
+{"ID": 8,"name": "Hummingbird","sprite": "res://art/Powerups/io_moth.png","price":2},
+{"ID": 9,"name": "Butterfly","sprite": "res://art/Powerups/orange_butterfly.png","price":4},
+{"ID": 10,"name": "Cabage White","sprite": "res://art/Powerups/cabbagewhite_butterfly.png","price":4},
+{"ID": 11,"name": "Silk Moth","sprite": "res://art/Powerups/rosy_moth.png","price":3},
+{"ID": 12,"name": "Comet Moth","sprite": "res://art/Powerups/comet_moth.png","price":3},
+{"ID": 13,"name": "Ladybug","sprite": "res://art/Powerups/wasp.png","price":2},
+{"ID": 14,"name": "Yellow Ladybug","sprite": "res://art/Powerups/wasp.png","price":4},
   ]
