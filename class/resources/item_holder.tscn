@@ -22,13 +22,14 @@ offset_bottom = 0.24799919
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f0fhf")
-metadata/texVal = "LeafBlower"
+metadata/ItemType = 0
 
 [node name="Itemsprite" type="Sprite2D" parent="." unique_id=1204451733]
 position = Vector2(32, 20)
 texture = ExtResource("2_6d865")
 
 [node name="Tooltip" type="Node2D" parent="." unique_id=224137189]
+visible = false
 position = Vector2(32, -16)
 
 [node name="DescBox" type="Sprite2D" parent="Tooltip" unique_id=157532506]

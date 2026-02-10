@@ -5,18 +5,42 @@
 
 [node name="Node" type="Node2D" unique_id=1209541941]
 
+[node name="Forgetmenots2" type="Sprite2D" parent="." unique_id=1730021666]
+modulate = Color(0, 0, 0, 0.13333334)
+texture_filter = 1
+position = Vector2(-10, 5)
+texture = ExtResource("1_5x7q8")
+
+[node name="Miniforgetmenots" type="Sprite2D" parent="Forgetmenots2" unique_id=1737501004]
+use_parent_material = true
+position = Vector2(-24.5, 28.5)
+texture = ExtResource("2_3xcdi")
+
+[node name="Miniforgetmenots2" type="Sprite2D" parent="Forgetmenots2" unique_id=1100802056]
+use_parent_material = true
+position = Vector2(39.5, 16.5)
+texture = ExtResource("2_3xcdi")
+
+[node name="Miniforgetmenots3" type="Sprite2D" parent="Forgetmenots2" unique_id=836443115]
+use_parent_material = true
+position = Vector2(-29.5, -33)
+texture = ExtResource("2_3xcdi")
+
 [node name="Forgetmenots" type="Sprite2D" parent="." unique_id=1299405933]
 texture_filter = 1
 texture = ExtResource("1_5x7q8")
 
 [node name="Miniforgetmenots" type="Sprite2D" parent="Forgetmenots" unique_id=576264674]
+use_parent_material = true
 position = Vector2(-24.5, 28.5)
 texture = ExtResource("2_3xcdi")
 
 [node name="Miniforgetmenots2" type="Sprite2D" parent="Forgetmenots" unique_id=342194820]
+use_parent_material = true
 position = Vector2(39.5, 16.5)
 texture = ExtResource("2_3xcdi")
 
 [node name="Miniforgetmenots3" type="Sprite2D" parent="Forgetmenots" unique_id=1713975074]
+use_parent_material = true
 position = Vector2(-29.5, -33)
 texture = ExtResource("2_3xcdi")

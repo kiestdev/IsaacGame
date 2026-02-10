@@ -1,12 +1,57 @@
 using Godot;
 using System;
 
+public enum ItemType 
+{
+	Gnome,
+	Fountain,
+	Fertile,
+	LeafBlower,
+	Chair,
+	misc
+}
+
 public partial class ItemHolder : Control
 {
+	ItemType item = ItemType.misc ; 
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		
+		switch(item)
+		{
+			case ItemType.Gnome:
+			{
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/gnome_fixed.png");
+				break;
+			}
+			case ItemType.Fountain:
+			{	
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/fountain_small.png");
+				break;
+			}
+			case ItemType.Fertile:
+			{
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/fertalizer_fixed.png");
+				break;
+			}
+			case ItemType.Chair:
+			{
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/items/lawnchair.png");
+				break;
+			}
+			case ItemType.LeafBlower:
+			{
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/items/leafblower.png");
+				break;
+			}
+			case ItemType.misc:
+			{
+				GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/Big_coin_fixed.png");
+				break;
+			}
+			
+		}
 		string texKey = (string)GetMeta("texVal");
 		if(texKey == "gnome"){ GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/gnome_fixed.png"); }
 		else if(texKey == "Fountain"){ GetNode<Sprite2D>("Itemsprite").Texture = (Texture2D)ResourceLoader.Load("res://art/gnome_fixed.png"); }

@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://c6wn2l3abq0t3"]
 
-[ext_resource type="PackedScene" uid="uid://b6nu3sdrihw44" path="res://class/p_environment/Llevel.tscn" id="2_choow"]
-[ext_resource type="PackedScene" path="res://class/gc_economy/LShop.tscn" id="3_a4g3j"]
+[ext_resource type="PackedScene" uid="uid://qa4oj5a736bm" path="res://class/p_environment/Llevel.tscn" id="2_choow"]
 
 [node name="world" type="Node2D" unique_id=244721895]
 texture_filter = 1
 
 [node name="Shop" type="Node2D" parent="." unique_id=912659844]
-position = Vector2(1400, -344)
-
-[node name="LShop" parent="Shop" unique_id=684209442 instance=ExtResource("3_a4g3j")]
-position = Vector2(87, -135.00003)
+position = Vector2(2088, 0)
 
 [node name="Level" type="Node2D" parent="." unique_id=2105379977]
 
 [node name="LLevel" parent="Level" unique_id=16523455 instance=ExtResource("2_choow")]
 
-[editable path="Shop/LShop"]
+[node name="TetrominoGen" parent="Level/LLevel" index="6" unique_id=1993780603]
+position = Vector2(256, -62)
+
 [editable path="Level/LLevel"]

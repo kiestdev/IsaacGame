@@ -5,6 +5,32 @@
 
 [node name="RPansy" type="Node2D" unique_id=820988882]
 
+[node name="PansyFlower2" type="Sprite2D" parent="." unique_id=1528437820]
+modulate = Color(0, 0, 0, 0.13333334)
+texture_filter = 1
+position = Vector2(-10, 5)
+texture = ExtResource("1_ysnce")
+
+[node name="Minipansy" type="Sprite2D" parent="PansyFlower2" unique_id=1619683766]
+texture_filter = 1
+position = Vector2(32, 36)
+texture = ExtResource("2_t1hyh")
+
+[node name="Minipansy2" type="Sprite2D" parent="PansyFlower2" unique_id=128888168]
+texture_filter = 1
+position = Vector2(42, -17)
+texture = ExtResource("2_t1hyh")
+
+[node name="Minipansy3" type="Sprite2D" parent="PansyFlower2" unique_id=1952813176]
+texture_filter = 1
+position = Vector2(-38, 20)
+texture = ExtResource("2_t1hyh")
+
+[node name="Minipansy4" type="Sprite2D" parent="PansyFlower2" unique_id=1333325303]
+texture_filter = 1
+position = Vector2(-15, -42)
+texture = ExtResource("2_t1hyh")
+
 [node name="PansyFlower" type="Sprite2D" parent="." unique_id=1075312680]
 texture_filter = 1
 texture = ExtResource("1_ysnce")
