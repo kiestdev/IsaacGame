@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://boijlkb603kr" path="res://class/gc_shop/p_shop_interface.gd" id="1_57v4j"]
 [ext_resource type="Texture2D" uid="uid://pvvcrfrynsei" path="res://art/shop_fixed.png" id="2_rukuj"]
 [ext_resource type="Texture2D" uid="uid://oxxoby4gh823" path="res://art/items/lawnchair.png" id="3_3yq58"]
+[ext_resource type="Texture2D" uid="uid://wndvofvadp0s" path="res://art/soul/silly_birdman_nutral_portrate.png" id="3_dlh0g"]
 [ext_resource type="FontFile" uid="uid://slty3sixiqs6" path="res://Assets/Font/dogicabold.otf" id="4_rukuj"]
 
 [sub_resource type="Image" id="Image_dlh0g"]
@@ -1245,6 +1246,17 @@ layout_mode = 2
 text = "Leave Shop
 "
 
+[node name="reroll" type="Button" parent="PUpperDiv" unique_id=1929001697]
+layout_mode = 2
+text = "reroll"
+
+[node name="SillyBirdmanNutralPortrate" type="Sprite2D" parent="PUpperDiv" unique_id=277497844]
+texture_filter = 1
+position = Vector2(334.00003, 230)
+rotation = -0.017453292
+scale = Vector2(2.71875, 2.53125)
+texture = ExtResource("3_dlh0g")
+
 [node name="USDCoinCt" type="HBoxContainer" parent="." unique_id=1817348745]
 layout_mode = 0
 offset_left = -395.0
@@ -1536,10 +1548,5 @@ offset_bottom = -8.0
 flat = true
 metadata/item_id = 0
 
-[node name="Button2" type="Button" parent="." unique_id=1929001697]
-layout_mode = 0
-offset_left = 305.0
-offset_top = -241.0
-offset_right = 396.0
-offset_bottom = -151.0
-text = "reroll"
+[connection signal="button_down" from="PUpperDiv/BLeaveShop" to="." method="_on_b_leave_shop_button_down"]
+[connection signal="button_down" from="PUpperDiv/reroll" to="." method="_on_reroll_button_down"]
