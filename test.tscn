@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvkrygu0qpxml"]
+
+[ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="1_37kl0"]
+
+[node name="Test" type="Node2D" unique_id=851645731]
+
+[node name="TetrominoGen" parent="." unique_id=1993780603 instance=ExtResource("1_37kl0")]
+scale = Vector2(0.5, 0.5)

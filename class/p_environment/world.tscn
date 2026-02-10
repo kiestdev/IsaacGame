@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://c6wn2l3abq0t3"]
 
+[ext_resource type="Script" uid="uid://bllbx7700u38w" path="res://class/p_environment/World.cs" id="1_choow"]
 [ext_resource type="PackedScene" uid="uid://qa4oj5a736bm" path="res://class/p_environment/Llevel.tscn" id="2_choow"]
 
 [node name="world" type="Node2D" unique_id=244721895]
 texture_filter = 1
+script = ExtResource("1_choow")
+metadata/Stage = 8
 
 [node name="Shop" type="Node2D" parent="." unique_id=912659844]
 position = Vector2(2088, 0)
@@ -16,3 +19,4 @@ position = Vector2(2088, 0)
 position = Vector2(256, -62)
 
 [editable path="Level/LLevel"]
+[editable path="Level/LLevel/Level UI"]

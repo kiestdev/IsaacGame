@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://qa4oj5a736bm"]
 
 [ext_resource type="Texture2D" uid="uid://rmab5c7jo1aa" path="res://art/bg.png" id="1_1te6x"]
+[ext_resource type="Script" uid="uid://b2b7yw3j0pq0t" path="res://class/p_environment/Llevel.cs" id="1_uy4re"]
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_y732a"]
 [ext_resource type="Texture2D" uid="uid://dg47uh1oyjo3b" path="res://art/items/pond.png" id="2_6unwn"]
 [ext_resource type="PackedScene" uid="uid://d1rhjk4m8n8" path="res://class/p_environment/tetromino.tscn" id="2_ul6te"]
@@ -84,6 +85,7 @@ sources/0 = SubResource("TileSetAtlasSource_jqcfu")
 [node name="LLevel" type="Node2D" unique_id=16523455]
 texture_filter = 1
 position = Vector2(576, 342)
+script = ExtResource("1_uy4re")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476995302]
 position = Vector2(-2.111145, -0.49998474)
@@ -134,3 +136,5 @@ texture = ExtResource("7_avsbc")
 
 [node name="Camera" type="Camera2D" parent="LevelMark" unique_id=1187648727]
 texture_filter = 1
+
+[editable path="Level UI"]

@@ -170,7 +170,7 @@ theme = SubResource("Theme_56b3f")
 text = "Null"
 
 [node name="ScoreContain" type="Node2D" parent="." unique_id=1569447514]
-position = Vector2(23, 28)
+position = Vector2(7, 28)
 
 [node name="Scoretray" type="Sprite2D" parent="ScoreContain" unique_id=34038314]
 position = Vector2(80, 40)
@@ -182,7 +182,7 @@ position = Vector2(80, 116.08)
 scale = Vector2(0.632411, 0.56125003)
 texture = ExtResource("1_1la40")
 
-[node name="Label" type="Label" parent="ScoreContain" unique_id=2007267025]
+[node name="MinPer" type="Label" parent="ScoreContain" unique_id=2007267025]
 offset_left = 40.0
 offset_top = 40.0
 offset_right = 88.0
@@ -214,7 +214,7 @@ position = Vector2(24, 48)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_y33wi")
 
-[node name="Label2" type="Label" parent="ScoreContain" unique_id=1107558000]
+[node name="CurrentPer" type="Label" parent="ScoreContain" unique_id=1107558000]
 offset_left = 40.0
 offset_top = 120.0
 offset_right = 64.0
@@ -229,24 +229,51 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_y33wi")
 
 [node name="CurrencyContain" type="Node2D" parent="." unique_id=2084611228]
-position = Vector2(79, 188)
+position = Vector2(71, 188)
 
 [node name="Scoretray" type="Sprite2D" parent="CurrencyContain" unique_id=1405313542]
-position = Vector2(52, 32.000004)
-scale = Vector2(0.34782603, 0.37499997)
+position = Vector2(56, 32.000004)
+scale = Vector2(0.3162055, 0.37499997)
 texture = ExtResource("1_1la40")
 
 [node name="Label" type="Label" parent="CurrencyContain" unique_id=1171562750]
-offset_left = 48.0
+offset_left = 56.0
 offset_top = 24.0
-offset_right = 88.0
+offset_right = 96.0
 offset_bottom = 48.0
 theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("3_5ud74")
 text = "0"
 
 [node name="BigCoinFixed" type="Sprite2D" parent="CurrencyContain" unique_id=1173793466]
-position = Vector2(32, 32)
+position = Vector2(40, 32)
 texture = ExtResource("9_gi6bg")
+
+[node name="StageContain" type="Node2D" parent="." unique_id=250937089]
+position = Vector2(-9, 188)
+
+[node name="StageTray" type="Sprite2D" parent="StageContain" unique_id=2026267632]
+position = Vector2(56, 32.000004)
+scale = Vector2(0.3162055, 0.37499997)
+texture = ExtResource("1_1la40")
+
+[node name="StageNum" type="Label" parent="StageContain" unique_id=1243887941]
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 88.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("3_5ud74")
+text = "0"
+
+[node name="StageTitle" type="Label" parent="StageContain" unique_id=57831787]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 64.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("3_5ud74")
+theme_override_font_sizes/font_size = 13
+text = "Stage"
 
 [connection signal="toggled" from="Switcher/Modeswitch" to="." method="_on_modeswitch_toggled"]

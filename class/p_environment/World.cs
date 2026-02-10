@@ -1,8 +1,10 @@
 using Godot;
 using System;
 
-public partial class LevelUi : Control
+public partial class World : Node2D
 {
+	public int currency = 0;
+	public int stage = 0;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -12,12 +14,4 @@ public partial class LevelUi : Control
 	public override void _Process(double delta)
 	{
 	}
-
-	public void _on_modeswitch_toggled(bool toggled)
-	{
-		GetNode<Node2D>("ItemHolder/Itemflow").Visible = !toggled;
-		GetNode<Node2D>("ItemHolder/PowerFlow").Visible = toggled;
-	}
-
-	
 }

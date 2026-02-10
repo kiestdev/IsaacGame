@@ -25,8 +25,8 @@ script = ExtResource("1_8adxl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=563466806]
 texture_filter = 1
-position = Vector2(-5.4999647, 4.9999847)
-scale = Vector2(9.6328125, 5.4687495)
+position = Vector2(-0.99999714, -1.0000095)
+scale = Vector2(9.125001, 5.1718745)
 texture = SubResource("CanvasTexture_8adxl")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2117464253]
