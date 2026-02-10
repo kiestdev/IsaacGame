@@ -5,6 +5,28 @@
 
 [node name="Node" type="Node2D" unique_id=740324487]
 
+[node name="DasiyFlower2" type="Sprite2D" parent="." unique_id=695852075]
+modulate = Color(0, 0, 0, 0.13333334)
+texture_filter = 1
+position = Vector2(-10, 5)
+texture = ExtResource("1_5035k")
+
+[node name="Minidaisy" type="Sprite2D" parent="DasiyFlower2" unique_id=1778499701]
+position = Vector2(31.5, 31)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy2" type="Sprite2D" parent="DasiyFlower2" unique_id=1552508928]
+position = Vector2(42, -15.5)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy3" type="Sprite2D" parent="DasiyFlower2" unique_id=392559620]
+position = Vector2(-34, -32.5)
+texture = ExtResource("2_e7b1l")
+
+[node name="Minidaisy4" type="Sprite2D" parent="DasiyFlower2" unique_id=968101333]
+position = Vector2(-29.5, 35.5)
+texture = ExtResource("2_e7b1l")
+
 [node name="DasiyFlower" type="Sprite2D" parent="." unique_id=407687892]
 texture_filter = 1
 texture = ExtResource("1_5035k")

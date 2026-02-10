@@ -5,6 +5,32 @@
 
 [node name="Node" type="Node2D" unique_id=905533588]
 
+[node name="Sunflower2" type="Sprite2D" parent="." unique_id=1050151596]
+modulate = Color(0, 0, 0, 0.13333334)
+texture_filter = 1
+position = Vector2(-10, 5)
+texture = ExtResource("1_svfla")
+
+[node name="Minisunflower" type="Sprite2D" parent="Sunflower2" unique_id=726991342]
+texture_filter = 1
+position = Vector2(35, 31.5)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower2" type="Sprite2D" parent="Sunflower2" unique_id=255787606]
+texture_filter = 1
+position = Vector2(43, -34.5)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower3" type="Sprite2D" parent="Sunflower2" unique_id=805612631]
+texture_filter = 1
+position = Vector2(-37, -23)
+texture = ExtResource("2_ikrfm")
+
+[node name="Minisunflower4" type="Sprite2D" parent="Sunflower2" unique_id=742516499]
+texture_filter = 1
+position = Vector2(-23, 37)
+texture = ExtResource("2_ikrfm")
+
 [node name="Sunflower" type="Sprite2D" parent="." unique_id=206726495]
 texture_filter = 1
 texture = ExtResource("1_svfla")
