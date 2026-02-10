@@ -101,6 +101,7 @@ func disabling(path: Node):
 		for child2 in child.get_children():
 			if child2 is CollisionShape2D:
 				child2.set_deferred("disabled",true)
+				child2.queue_free()
 		if child is Sprite2D:
 			child.visible = false
 
