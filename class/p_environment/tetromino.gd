@@ -107,6 +107,7 @@ func disabling(path: Node):
 var clicked = 0
 var pos_offset = Vector2(0,0)
 func _input(event):
+	var ghost_pos = Vector2(0,0)
 	if Input.is_action_just_pressed("click") and get_parent().get_meta("placed") == false:
 		print(event.position.x)
 		print(global_position.x,", ",(global_position.x + (256 * $".".get_parent().scale.x)))
@@ -131,15 +132,16 @@ func _input(event):
 				if Input.is_action_just_pressed("rotate"):
 					rotation += PI/2
 					pos_offset += Vector2(0,-256*cur_scale).rotated(rotation)
-				for chode in get_children():
+				for chode in get_children(): #chode refers to the ghost
 					if chode is TileMapLayer and chode.visible == true:
 						print(chode.get_child(0).global_position)
 						chode.get_child(0).position = Vector2.ZERO
-						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale))
+						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
 						print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
+						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
-				position = position.snapped(Vector2(128*cur_scale,128*cur_scale))
+				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
 				get_parent().set_meta("placed",true)
 		#print("Mouse Click/Unclick at: ", event.position)
 		#print((event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)))
