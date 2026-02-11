@@ -136,9 +136,9 @@ func _input(event):
 					if chode is TileMapLayer and chode.visible == true:
 						print(chode.get_child(0).global_position)
 						chode.get_child(0).position = Vector2.ZERO
-						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
+						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
 						print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
-						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
+						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
 				await get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
