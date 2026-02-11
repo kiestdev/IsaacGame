@@ -22,7 +22,7 @@ public partial class MainMenu : Control
 	}
 
 	public void _on_quit_pressed()
-    {
+	{
 		GetTree().Quit();
 		GD.Print("printed");
 	}

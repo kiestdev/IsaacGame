@@ -1226,12 +1226,17 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 573.0
+offset_top = 322.0
+offset_right = 573.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_57v4j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1906609233]
 texture_filter = 1
+position = Vector2(3, 2)
 texture = ExtResource("2_rukuj")
 
 [node name="PUpperDiv" type="VBoxContainer" parent="." unique_id=1652725920]
@@ -1243,12 +1248,12 @@ offset_bottom = -246.0
 
 [node name="BLeaveShop" type="Button" parent="PUpperDiv" unique_id=1026816840]
 layout_mode = 2
-text = "Leave Shop
+text = "Leave Shop(0 coins)
 "
 
 [node name="reroll" type="Button" parent="PUpperDiv" unique_id=1929001697]
 layout_mode = 2
-text = "reroll"
+text = "reroll (8 coins)"
 
 [node name="SillyBirdmanNutralPortrate" type="Sprite2D" parent="PUpperDiv" unique_id=277497844]
 texture_filter = 1
@@ -1271,8 +1276,6 @@ text = "Coins: "
 [node name="LCoins" type="Label" parent="USDCoinCt" unique_id=2030011131]
 layout_mode = 2
 text = "100000"
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=709119074]
 
 [node name="item1" type="Control" parent="." unique_id=886671872]
 anchors_preset = 0
