@@ -18,6 +18,6 @@ public partial class mouse : Control
 		Input.SetCustomMouseCursor(beam, Input.CursorShape.Ibeam);
 		
 		// Change click shape
-		Input.SetCustomMouseCursor(click, Input.CursorShape.Pointinghand);
+		Input.SetCustomMouseCursor(click, Input.CursorShape.PointingHand);
 	}
 }
