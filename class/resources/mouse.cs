@@ -7,7 +7,6 @@ public partial class mouse : Control
 	{
 		// Load the custom images for the mouse cursor.
 		var arrow = ResourceLoader.Load("res://art/ui/mouse.png");
-		var beam = ResourceLoader.Load("res://art/ui/mouse.png");
 		var click = ResourceLoader.Load("res://art/ui/mouseclick.png");
 
 		// Changes only the arrow shape of the cursor.
@@ -15,7 +14,7 @@ public partial class mouse : Control
 		Input.SetCustomMouseCursor(arrow);
 
 		// Changes a specific shape of the cursor (here, the I-beam shape).
-		Input.SetCustomMouseCursor(beam, Input.CursorShape.Ibeam);
+		Input.SetCustomMouseCursor(arrow, Input.CursorShape.Ibeam);
 		
 		// Change click shape
 		Input.SetCustomMouseCursor(click, Input.CursorShape.PointingHand);
