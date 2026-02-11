@@ -6,7 +6,10 @@
 [node name="world" type="Node2D" unique_id=244721895]
 texture_filter = 1
 script = ExtResource("1_choow")
-metadata/Stage = 8
+metadata/Stage = 1
+metadata/Currency = 0
+metadata/Items = [null, null, null, null, null]
+metadata/Powers = [null, null, null, null, null]
 
 [node name="Shop" type="Node2D" parent="." unique_id=912659844]
 position = Vector2(2088, 0)
@@ -14,9 +17,10 @@ position = Vector2(2088, 0)
 [node name="Level" type="Node2D" parent="." unique_id=2105379977]
 
 [node name="LLevel" parent="Level" unique_id=16523455 instance=ExtResource("2_choow")]
+position = Vector2(576, 320)
 
 [node name="TetrominoGen" parent="Level/LLevel" index="6" unique_id=1993780603]
-position = Vector2(256, -62)
+position = Vector2(256, -64)
 
 [editable path="Level/LLevel"]
 [editable path="Level/LLevel/Level UI"]
