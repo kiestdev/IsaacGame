@@ -9,6 +9,7 @@ var coins = 400
 @onready var sold_out = preload("res://art/ui/sold.png")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$USDCoinCt/LCoins.text = str(coins)
 	items = ready_list("res://class/gc_shop/item_lists/items.json")
 	powerups = ready_list("res://class/gc_shop/item_lists/powerups.json")
 	run_powerups()
@@ -41,7 +42,7 @@ func run_powerups():
 			var cycle = 0
 			while new == false:
 				print(child_num,", redo")
-				rand = randi() % 4
+				rand = randi() % 5
 				if cycle <= 6:
 					print("	",(items[rand]['ID']))
 					print("	",temp_items)
@@ -98,15 +99,17 @@ func _physics_process(_delta: float) -> void:
 					coins -= int(items[button.get_meta("item_id")]['price'])
 					button.disabled = true
 					button.get_parent().get_child(0).texture = sold_out
+					button.get_parent().get_child(1).text = ""
+					button.get_parent().get_child(2).text = ""
 					$USDCoinCt/LCoins.text = str(coins)
-					temp_items.append(button.get_meta("item_id"))
+					get_parent().items.append(button.get_meta("item_id"))
 			else:
 				if int(powerups[button.get_meta("item_id")- 5]['price']) <= coins:
 					coins -= int(powerups[button.get_meta("item_id")- 5]['price'])
 					button.disabled = true
 					button.get_parent().get_child(0).texture = sold_out
 					$USDCoinCt/LCoins.text = str(coins)
-					temp_owned.append(button.get_meta("item_id"))
+					get_parent().powerups.append(button.get_meta("item_id"))
 			print(temp_owned,temp_items)
 
 
@@ -121,5 +124,4 @@ func _on_b_leave_shop_button_down() -> void:
 	$".".visible = false
 	print("left")
 	queue_free()
-	get_tree().quit()
 	visible = true
