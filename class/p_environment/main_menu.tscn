@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c2u3l0okjjimf" path="res://art/dirttileset/dirttileset.png" id="1_7pak5"]
 [ext_resource type="Script" uid="uid://bq12jqirces6m" path="res://class/p_environment/MainMenu.cs" id="1_8adxl"]
+[ext_resource type="PackedScene" uid="uid://dd8ax2fg2mknb" path="res://class/resources/mouse.tscn" id="2_1puwe"]
 [ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="3_08ksx"]
 [ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="3_nxqxv"]
 [ext_resource type="Texture2D" uid="uid://oxb443cd58p4" path="res://art/ui/title.png" id="3_pkit3"]
@@ -22,6 +23,9 @@ offset_bottom = -322.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8adxl")
+
+[node name="Control" parent="." unique_id=587135630 instance=ExtResource("2_1puwe")]
+layout_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=563466806]
 texture_filter = 1
