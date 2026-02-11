@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="5_5ud74"]
 [ext_resource type="Texture2D" uid="uid://dyhy5k1wts10c" path="res://art/Flowers/mini/minisunflower.png" id="8_y33wi"]
 [ext_resource type="Texture2D" uid="uid://dsiafuoa6enu2" path="res://art/Big_coin_fixed.png" id="9_gi6bg"]
+[ext_resource type="Texture2D" uid="uid://dtjyfshscsqaq" path="res://art/Powerups/small_coin.png" id="10_gi6bg"]
 
 [sub_resource type="Theme" id="Theme_56b3f"]
 default_font = ExtResource("5_5ud74")
@@ -19,10 +20,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = 4.0
-offset_right = 1.0
-offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_evm6m")
@@ -232,22 +229,47 @@ texture = ExtResource("8_y33wi")
 position = Vector2(71, 188)
 
 [node name="Scoretray" type="Sprite2D" parent="CurrencyContain" unique_id=1405313542]
-position = Vector2(56, 32.000004)
-scale = Vector2(0.3162055, 0.37499997)
+position = Vector2(56.500004, 58)
+scale = Vector2(0.3201581, 0.78124994)
 texture = ExtResource("1_1la40")
 
 [node name="Label" type="Label" parent="CurrencyContain" unique_id=1171562750]
-offset_left = 56.0
-offset_top = 24.0
-offset_right = 96.0
-offset_bottom = 48.0
+offset_left = 57.0
+offset_top = 20.0
+offset_right = 97.0
+offset_bottom = 44.0
 theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("3_5ud74")
 text = "0"
 
 [node name="BigCoinFixed" type="Sprite2D" parent="CurrencyContain" unique_id=1173793466]
-position = Vector2(40, 32)
+position = Vector2(41, 36)
 texture = ExtResource("9_gi6bg")
+
+[node name="Label2" type="Label" parent="CurrencyContain" unique_id=1971925399]
+offset_left = 41.0
+offset_top = 92.0
+offset_right = 81.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("3_5ud74")
+theme_override_font_sizes/font_size = 8
+text = "+0"
+
+[node name="Label3" type="Label" parent="CurrencyContain" unique_id=1341394745]
+offset_left = 25.0
+offset_top = 60.0
+offset_right = 65.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
+theme_override_fonts/font = ExtResource("3_5ud74")
+theme_override_font_sizes/font_size = 8
+text = "This stage"
+autowrap_mode = 2
+
+[node name="BigCoinFixed2" type="Sprite2D" parent="CurrencyContain" unique_id=789484490]
+position = Vector2(33, 92)
+texture = ExtResource("10_gi6bg")
 
 [node name="StageContain" type="Node2D" parent="." unique_id=250937089]
 position = Vector2(-9, 188)
@@ -265,6 +287,7 @@ offset_bottom = 56.0
 theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("3_5ud74")
 text = "0"
+metadata/_edit_use_anchors_ = true
 
 [node name="StageTitle" type="Label" parent="StageContain" unique_id=57831787]
 offset_left = 24.0
@@ -275,5 +298,6 @@ theme_override_colors/font_color = Color(0.3019608, 0.18431373, 0.007843138, 1)
 theme_override_fonts/font = ExtResource("3_5ud74")
 theme_override_font_sizes/font_size = 13
 text = "Stage"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="toggled" from="Switcher/Modeswitch" to="." method="_on_modeswitch_toggled"]

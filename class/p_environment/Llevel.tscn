@@ -84,12 +84,10 @@ sources/0 = SubResource("TileSetAtlasSource_jqcfu")
 
 [node name="LLevel" type="Node2D" unique_id=16523455]
 texture_filter = 1
-position = Vector2(576, 342)
+position = Vector2(576, 324)
 script = ExtResource("1_uy4re")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476995302]
-position = Vector2(-2.111145, -0.49998474)
-scale = Vector2(1.0046296, 1.0046296)
 texture = ExtResource("1_1te6x")
 
 [node name="Pond" type="Sprite2D" parent="." unique_id=191398000]
