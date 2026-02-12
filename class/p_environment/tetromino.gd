@@ -162,6 +162,7 @@ func _input(event):
 				print(get_parent().get_meta("tile_percent"))
 				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
 				get_parent().set_meta("placed",true)
+				get_parent().get_parent().set_meta("curPercent",get_parent().get_meta("tile_percent"))
 		#print("Mouse Click/Unclick at: ", event.position)
 		#print((event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)))
 
