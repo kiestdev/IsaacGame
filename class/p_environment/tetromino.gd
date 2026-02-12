@@ -92,8 +92,9 @@ func generated():
 				#for i3 in child.get_children:
 					#i3.position = Vector2(0,0)
 
-
-
+signal frame
+func _process(_delta: float) -> void:
+	emit_signal("frame")
 
 func disabling(path: Node):
 	for child in path.get_children():
@@ -136,10 +137,25 @@ func _input(event):
 					if chode is TileMapLayer and chode.visible == true:
 						print(chode.get_child(0).global_position)
 						chode.get_child(0).position = Vector2.ZERO
-						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
+						#chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
 						print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
-						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
-				await get_tree().create_timer(1.0/120).timeout
+						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
+						if ghost_pos.x < 192:
+							ghost_pos.x = 192
+						if ghost_pos.y < 150:
+							ghost_pos.y = 150
+						if ghost_pos.x >= 960 and tetromino_type == 6:
+							ghost_pos.x = 896
+						elif ghost_pos.x >= 896:
+							ghost_pos.x = 832
+						if ghost_pos.y >= 470 * (cur_scale * 2) and tetromino_type == 0:
+							ghost_pos.y = 406 * (cur_scale * 2)
+						elif ghost_pos.y >= 342 * (cur_scale * 2) and tetromino_type == 6:
+							ghost_pos.y = 278 * (cur_scale * 2)
+						elif ghost_pos.y >= 406:
+							ghost_pos.y = 346 * (cur_scale * 2)
+						chode.get_child(0).global_position = ghost_pos
+				await frame#get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
 				get_parent().set_meta("placed",true)
