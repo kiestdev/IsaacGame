@@ -147,8 +147,11 @@ func _input(event):
 						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + tet_offset
 						if touchin_da_bounds == true:
 							in_bound = false
+							chode.get_child(0).modulate = Color(1,0,0)
+							print(chode.get_child(0).modulate)
 						else:
 							in_bound = true
+							chode.get_child(0).modulate = Color(1,1,1)
 						chode.get_child(0).global_position = ghost_pos
 				await frame#get_tree().create_timer(1.0/120).timeout
 			if focused == false:
