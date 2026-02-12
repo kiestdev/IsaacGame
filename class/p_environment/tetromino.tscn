@@ -263,6 +263,27 @@ sources/0 = SubResource("TileSetAtlasSource_vt44v")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
 size = Vector2(112, 112)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxp60"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tp16d"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjp4x"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kcjrc"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el6p3"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdkjg"]
+size = Vector2(126, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgky1"]
+size = Vector2(126, 126)
+
 [node name="TetrominoGen" type="Node2D" unique_id=1993780603]
 metadata/placed = false
 
@@ -464,3 +485,43 @@ position = Vector2(64, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tetromino/7/Area7" unique_id=820288627]
 position = Vector2(64, 64)
 shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="bound_check" type="Area2D" parent="tetromino" unique_id=1460611747]
+
+[node name="1" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=1090423655]
+position = Vector2(64, 64)
+shape = SubResource("RectangleShape2D_yxp60")
+disabled = true
+
+[node name="2" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=694041621]
+position = Vector2(192, 64)
+shape = SubResource("RectangleShape2D_tp16d")
+disabled = true
+
+[node name="3" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=1462476615]
+position = Vector2(64, 192)
+shape = SubResource("RectangleShape2D_gjp4x")
+disabled = true
+
+[node name="4" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=757590017]
+position = Vector2(192, 192)
+shape = SubResource("RectangleShape2D_kcjrc")
+disabled = true
+
+[node name="5" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=1892273533]
+position = Vector2(64, 320)
+shape = SubResource("RectangleShape2D_el6p3")
+disabled = true
+
+[node name="6" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=1848908451]
+position = Vector2(192, 320)
+shape = SubResource("RectangleShape2D_fdkjg")
+disabled = true
+
+[node name="7" type="CollisionShape2D" parent="tetromino/bound_check" unique_id=2067276101]
+position = Vector2(64, 448)
+shape = SubResource("RectangleShape2D_mgky1")
+disabled = true
+
+[connection signal="area_entered" from="tetromino/bound_check" to="tetromino" method="_on_bound_check_area_entered"]
+[connection signal="area_exited" from="tetromino/bound_check" to="tetromino" method="_on_bound_check_area_exited"]

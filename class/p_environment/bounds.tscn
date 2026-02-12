@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d376ey7thmp0q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdql6"]
+size = Vector2(1152, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22cas"]
+size = Vector2(192, 684)
+
+[node name="Area2D" type="Area2D" unique_id=1860027666 groups=["bounds"]]
+
+[node name="upper" type="CollisionShape2D" parent="." unique_id=1347955064 groups=["bounds"]]
+position = Vector2(576, 64)
+shape = SubResource("RectangleShape2D_vdql6")
+
+[node name="left" type="CollisionShape2D" parent="." unique_id=1816067876 groups=["bounds"]]
+position = Vector2(94, 342)
+shape = SubResource("RectangleShape2D_22cas")
+
+[node name="lower" type="CollisionShape2D" parent="." unique_id=1336995220 groups=["bounds"]]
+position = Vector2(576, 602)
+shape = SubResource("RectangleShape2D_vdql6")
+
+[node name="right" type="CollisionShape2D" parent="." unique_id=213545464 groups=["bounds"]]
+position = Vector2(1058, 342)
+shape = SubResource("RectangleShape2D_22cas")
+
+[node name="bounds" type="Node2D" parent="." unique_id=1777705750]
