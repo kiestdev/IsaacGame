@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://hif7f8ngss4e"]
+
+[ext_resource type="Script" uid="uid://c6rhln5bo8oi5" path="res://gnome.gd" id="1_4xtut"]
+[ext_resource type="Texture2D" uid="uid://bfphgsda41q7a" path="res://art/gnome_fixed.png" id="2_oe58m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xtut"]
+size = Vector2(40, 40)
+
+[node name="Gnome" type="Node2D" unique_id=24762922]
+script = ExtResource("1_4xtut")
+metadata/placed = false
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1428038319]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1195441638]
+shape = SubResource("RectangleShape2D_4xtut")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=771089396]
+texture_filter = 1
+texture = ExtResource("2_oe58m")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
