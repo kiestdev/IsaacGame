@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://bqmjvcby2041l"]
+
+[ext_resource type="Texture2D" uid="uid://dr42lhremr0f1" path="res://art/open_.png" id="1_ed6fu"]
+[ext_resource type="Texture2D" uid="uid://dndoew57v7t0y" path="res://art/ui/title.png" id="2_o42n5"]
+[ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="3_grfl0"]
+[ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="4_pmswt"]
+[ext_resource type="Texture2D" uid="uid://b2xorynabivf1" path="res://art/ui/StartQuitButton.png" id="5_y2yli"]
+[ext_resource type="Script" uid="uid://br3ksgk7u4rhf" path="res://class/p_environment/creturn.gd" id="6_o42n5"]
+
+[node name="CreditsPage" type="Control" unique_id=730756592]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="TextureRect" parent="." unique_id=1597089120]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ed6fu")
+
+[node name="Content" type="MarginContainer" parent="." unique_id=1906292710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ContentBody" type="VBoxContainer" parent="Content" unique_id=415789140]
+layout_mode = 2
+alignment = 1
+
+[node name="Sprite2D" type="TextureRect" parent="Content/ContentBody" unique_id=1523052160]
+layout_mode = 2
+texture = ExtResource("2_o42n5")
+stretch_mode = 3
+
+[node name="IsaacsTitle" type="MarginContainer" parent="Content/ContentBody" unique_id=586254697]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Design" type="VBoxContainer" parent="Content/ContentBody/IsaacsTitle" unique_id=1654091632]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="Content/ContentBody/IsaacsTitle/Design" unique_id=540629142]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Issac Carman"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/IsaacsTitle/Design" unique_id=715190381]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- Lead Design, Programmer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MElse" type="MarginContainer" parent="Content/ContentBody" unique_id=1886331089]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="EveryoneElse" type="HBoxContainer" parent="Content/ContentBody/MElse" unique_id=1101976651]
+layout_mode = 2
+alignment = 1
+
+[node name="RoleRows" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse" unique_id=681076113]
+layout_mode = 2
+alignment = 1
+
+[node name="MArtists" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows" unique_id=2055187297]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Artists" type="HBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists" unique_id=1407460408]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists" unique_id=991218650]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Entry4" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer2" unique_id=2073332044]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer2/Entry4" unique_id=1658634710]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Kat Bassett"
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer2/Entry4" unique_id=1339548443]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- Art Director and 2D Artist"
+horizontal_alignment = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists" unique_id=2130691754]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Entry5" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer3" unique_id=1841796846]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer3/Entry5" unique_id=1199351633]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Callen Dickerson"
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer3/Entry5" unique_id=1175119090]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- 2D Artist"
+horizontal_alignment = 1
+
+[node name="MarginContainer4" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists" unique_id=763241999]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Entry6" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer4" unique_id=2008597381]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer4/Entry6" unique_id=1211439361]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Lauren Rushton"
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MArtists/Artists/MarginContainer4/Entry6" unique_id=327662143]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- Designer"
+horizontal_alignment = 1
+
+[node name="MProgrammers" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows" unique_id=1415497739]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="PGrammers" type="HBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers" unique_id=245261726]
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers" unique_id=777209021]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Entry2" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer2" unique_id=964957372]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer2/Entry2" unique_id=1675214836]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Christopher Herron"
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer2/Entry2" unique_id=1317920529]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- Programmer"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers" unique_id=709714263]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Entry1" type="VBoxContainer" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer" unique_id=1262127786]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer/Entry1" unique_id=1596394966]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Michael Crump"
+horizontal_alignment = 1
+
+[node name="Role" type="Label" parent="Content/ContentBody/MElse/EveryoneElse/RoleRows/MProgrammers/PGrammers/MarginContainer/Entry1" unique_id=206447352]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "- Backup Programmer"
+horizontal_alignment = 1
+
+[node name="M_OSSAttrib" type="MarginContainer" parent="Content/ContentBody" unique_id=1707707206]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/ContentBody/M_OSSAttrib" unique_id=1058262875]
+layout_mode = 2
+
+[node name="Godot" type="Label" parent="Content/ContentBody/M_OSSAttrib/VBoxContainer" unique_id=1925368704]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "Made Using the Godot Game Engine. 
+Godot is protected under the MIT Licence.
+"
+horizontal_alignment = 1
+
+[node name="Dotnet" type="Label" parent="Content/ContentBody/M_OSSAttrib/VBoxContainer" unique_id=390071127]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "This software utilizes DOTNET, A software by 
+Microsoft Incorporated. DOTNET is protected under the MIT License. 
+"
+horizontal_alignment = 1
+
+[node name="Dotnet2" type="Label" parent="Content/ContentBody/M_OSSAttrib/VBoxContainer" unique_id=2142195421]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_grfl0")
+text = "AI replication, and/or training utilizing references to assets from 
+this software is prohibited."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1426236090]
+layout_direction = 2
+layout_mode = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 154.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_fonts/font = ExtResource("4_pmswt")
+text = "Return"
+icon = ExtResource("5_y2yli")
+flat = true
+icon_alignment = 1
+expand_icon = true
+text_direction = 1
+script = ExtResource("6_o42n5")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
