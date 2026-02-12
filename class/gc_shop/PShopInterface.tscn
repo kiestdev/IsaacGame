@@ -1551,5 +1551,12 @@ offset_bottom = -8.0
 flat = true
 metadata/item_id = 0
 
+[node name="LevelMark" type="Marker2D" parent="." unique_id=2005716755]
+position = Vector2(3, 6)
+
+[node name="Camera" type="Camera2D" parent="LevelMark" unique_id=1456270826]
+texture_filter = 1
+position = Vector2(0, -4)
+
 [connection signal="button_down" from="PUpperDiv/BLeaveShop" to="." method="_on_b_leave_shop_button_down"]
 [connection signal="button_down" from="PUpperDiv/reroll" to="." method="_on_reroll_button_down"]

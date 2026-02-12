@@ -86,6 +86,19 @@ sources/0 = SubResource("TileSetAtlasSource_jqcfu")
 texture_filter = 1
 position = Vector2(576, 324)
 script = ExtResource("1_uy4re")
+metadata/curPercent = 0
+
+[node name="TetrominoGen" parent="." unique_id=1993780603 instance=ExtResource("2_ul6te")]
+position = Vector2(-192, -283.99997)
+scale = Vector2(0.1, 0.1)
+
+[node name="TetrominoGen2" parent="." unique_id=1868270713 instance=ExtResource("2_ul6te")]
+position = Vector2(0, -284.00003)
+scale = Vector2(0.1, 0.1)
+
+[node name="TetrominoGen3" parent="." unique_id=715294649 instance=ExtResource("2_ul6te")]
+position = Vector2(199.99994, -284)
+scale = Vector2(0.1, 0.1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1476995302]
 texture = ExtResource("1_1te6x")
@@ -126,35 +139,6 @@ grow_vertical = 1
 [node name="Camera" type="Camera2D" parent="LevelMark" unique_id=1187648727]
 texture_filter = 1
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=426641770]
-position = Vector2(-192, -284)
-scale = Vector2(0.5, 0.5)
-
-[node name="Tetro1signal" type="Button" parent="Marker2D" unique_id=1717398518]
-offset_left = -208.0
-offset_right = 8.0
-offset_bottom = 112.0
-flat = true
-
-[node name="Marker2D2" type="Marker2D" parent="." unique_id=370133726]
-position = Vector2(0, -284)
-scale = Vector2(0.5, 0.5)
-
-[node name="Tetro1signal" type="Button" parent="Marker2D2" unique_id=806551427]
-offset_left = -208.0
-offset_right = 8.0
-offset_bottom = 112.0
-flat = true
-
-[node name="Marker2D3" type="Marker2D" parent="." unique_id=69713124]
-position = Vector2(192, -284)
-scale = Vector2(0.5, 0.5)
-
-[node name="Tetro1signal" type="Button" parent="Marker2D3" unique_id=632574412]
-offset_left = -208.0
-offset_bottom = 112.0
-flat = true
-
 [node name="Area2D" parent="." unique_id=1860027666 instance=ExtResource("9_2m8el")]
 visible = false
 position = Vector2(-576, -332)
@@ -165,17 +149,33 @@ position = Vector2(576, 48)
 [node name="left" parent="Area2D" index="1" unique_id=1816067876]
 position = Vector2(83, 342)
 
-[node name="TetrominoGen" parent="." unique_id=1993780603 instance=ExtResource("2_ul6te")]
-position = Vector2(-191.99998, -283.99997)
-scale = Vector2(0.1, 0.1)
+[node name="Marker2D" type="Marker2D" parent="." unique_id=426641770]
+position = Vector2(-192, -284)
+scale = Vector2(0.5, 0.5)
 
-[node name="TetrominoGen2" parent="." unique_id=1868270713 instance=ExtResource("2_ul6te")]
-position = Vector2(-3.0517578e-05, -284.00003)
-scale = Vector2(0.1, 0.1)
+[node name="Tetro1signal" type="Button" parent="Marker2D" unique_id=1717398518]
+offset_right = 64.0
+offset_bottom = 112.0
+flat = true
 
-[node name="TetrominoGen3" parent="." unique_id=715294649 instance=ExtResource("2_ul6te")]
-position = Vector2(199.99995, -284)
-scale = Vector2(0.1, 0.1)
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=370133726]
+position = Vector2(0, -284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Tetro1signal" type="Button" parent="Marker2D2" unique_id=806551427]
+offset_right = 64.0
+offset_bottom = 112.0
+flat = true
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=69713124]
+position = Vector2(192, -284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Tetro1signal" type="Button" parent="Marker2D3" unique_id=632574412]
+offset_left = 16.0
+offset_right = 80.0
+offset_bottom = 112.0
+flat = true
 
 [connection signal="button_down" from="Marker2D/Tetro1signal" to="." method="_on_tetro_1_signal_button_down"]
 [connection signal="button_down" from="Marker2D2/Tetro1signal" to="." method="_on_tetro_2_signal_button_down"]

@@ -32,30 +32,28 @@ public partial class Llevel : Node2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		if(Percent >= minimum)
+		GetNode<Label>("Level UI/ScoreContain/CurrentPer").Text = GetMeta("curPercent").ToString() + "%";
+		GD.Print("per:",GetMeta("curPercent"));
+		if((int)GetMeta("curPercent") >= minimum)
 		{
 			parent.SetMeta("Currency",(int)parent.GetMeta("Currency")+reward);
+			QueueFree();
 		}
 	}
 
 	public void spawnTetromino(Marker2D used,int num)
 	{
+		if(num==1){Percent+=(int)TetroMain1.GetMeta("tile_percent");}
+		else if(num==2){Percent+=(int)TetroMain2.GetMeta("tile_percent");}
+		else{Percent+=(int)TetroMain3.GetMeta("tile_percent");}
+		GD.Print(TetroMain3.GetMeta("tile_percent"));
 		Node2D instance = (Node2D)tetro.Instantiate();
 		AddChild(instance);
 		instance.Position = used.Position ;
 		instance.Scale = new Vector2(0.1f,0.1f);
-		if(num==1)
-		{
-			TetroMain1 = instance;
-		}
-		else if(num==2)
-		{
-			TetroMain2 = instance;
-		}
-		else
-		{
-			TetroMain3 = instance;
-		}
+		if(num==1){TetroMain1 = instance;}
+		else if(num==2){TetroMain2 = instance;}
+		else{TetroMain3 = instance;}
 	}
 	public void _on_tetro_1_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D"),1);}
 	public void _on_tetro_2_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D2"),2);}

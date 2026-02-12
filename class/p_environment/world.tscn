@@ -6,8 +6,15 @@
 [node name="world" type="Node2D" unique_id=244721895]
 texture_filter = 1
 script = ExtResource("1_choow")
-metadata/Stage = 1
+metadata/Stage = 3
 metadata/Currency = 0
+
+[node name="Label" type="Label" parent="." unique_id=2041239003]
+offset_left = 464.0
+offset_top = 264.0
+offset_right = 1352.0
+offset_bottom = 704.0
+text = "You Win!"
 
 [node name="Items" type="Node2D" parent="." unique_id=2077416209]
 
