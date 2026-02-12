@@ -128,6 +128,7 @@ func _input(event):
 			print("focused")
 			focused = true
 			var in_bound = true
+			get_parent().scale = Vector2(0.5,0.5)
 			while focused:
 				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale) + pos_offset
 				if Input.is_action_just_released("click") and in_bound == true:#Input.is_action_just_pressed("click"):
@@ -148,7 +149,6 @@ func _input(event):
 						if touchin_da_bounds == true:
 							in_bound = false
 							chode.get_child(0).modulate = Color(1,0,0)
-							print(chode.get_child(0).modulate)
 						else:
 							in_bound = true
 							chode.get_child(0).modulate = Color(1,1,1)
