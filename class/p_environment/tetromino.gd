@@ -28,7 +28,7 @@ var abled
 func _ready() -> void:
 	#for child in $".".get_children():
 		#child.custom_minimum_size = Vector2(128,128)
-	tetromino_type = randi() % 6
+	tetromino_type = randi() % 7
 	print(tetromino_type)
 	cur_scale = $".".get_parent().scale.x
 	check_list = [$"1",$"2",$"3",$"4",$"5",$"6",$"7"]
