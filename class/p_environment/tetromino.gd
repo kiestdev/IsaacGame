@@ -30,7 +30,7 @@ func _ready() -> void:
 		#child.custom_minimum_size = Vector2(128,128)
 	tetromino_type = randi() % 7
 	print(tetromino_type)
-	cur_scale = $".".get_parent().scale.x
+	cur_scale = 0.5 #$".".get_parent().scale.x
 	check_list = [$"1",$"2",$"3",$"4",$"5",$"6",$"7"]
 	generated()
 	print(get_parent().get_meta("placed"))
