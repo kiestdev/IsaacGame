@@ -5,8 +5,10 @@ const flower3 = preload("res://class/resources/RPansy.tscn")
 const flower4 = preload("res://class/resources/RSunflower.tscn")
 var cur_scale 
 var focused = false
-
+var tet_offset = Vector2(0,4) #fuck this stupid fucking cuck ass ui
+var touchin_da_bounds = false
 var tetromino_type = 0 
+var check_list = [$"1",$"2",$"3",$"4",$"5",$"6",$"7"]
 # 0 = square 
 # 1 = T
 # 2 = L
@@ -29,6 +31,7 @@ func _ready() -> void:
 	tetromino_type = randi() % 6
 	print(tetromino_type)
 	cur_scale = $".".get_parent().scale.x
+	check_list = [$"1",$"2",$"3",$"4",$"5",$"6",$"7"]
 	generated()
 	print(get_parent().get_meta("placed"))
 	#$"1/sprite1/Sprite2D".texture =flower1
@@ -79,6 +82,7 @@ func generated():
 		abled = [$"1",$"3",$"5",$"6"]
 		$L.visible = true
 	var i1 =0
+	bound_check()
 	for i in abled:
 		var i2 = i1
 		i1 +=1
@@ -92,8 +96,9 @@ func generated():
 				#for i3 in child.get_children:
 					#i3.position = Vector2(0,0)
 
-
-
+signal frame
+func _process(_delta: float) -> void:
+	emit_signal("frame")
 
 func disabling(path: Node):
 	for child in path.get_children():
@@ -122,9 +127,10 @@ func _input(event):
 			print("clicked")
 			print("focused")
 			focused = true
+			var in_bound = true
 			while focused:
 				global_position = get_global_mouse_position() - Vector2(128.0 * cur_scale,128.0 * cur_scale) + pos_offset
-				if Input.is_action_just_released("click"):#Input.is_action_just_pressed("click"):
+				if Input.is_action_just_released("click") and in_bound == true:#Input.is_action_just_pressed("click"):
 					focused = false
 					for chode in get_children():
 						if chode is TileMapLayer and chode.visible == true:
@@ -134,14 +140,61 @@ func _input(event):
 					pos_offset += Vector2(0,-256*cur_scale).rotated(rotation)
 				for chode in get_children(): #chode refers to the ghost
 					if chode is TileMapLayer and chode.visible == true:
-						print(chode.get_child(0).global_position)
+						#print(chode.get_child(0).global_position)
 						chode.get_child(0).position = Vector2.ZERO
-						chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
-						print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
-						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,0)
-				await get_tree().create_timer(1.0/120).timeout
+						#chode.get_child(0).global_position = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + Vector2(0,22)
+						#print(chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)))
+						ghost_pos = chode.get_child(0).global_position.snapped(Vector2(128*cur_scale,128*cur_scale)) + tet_offset
+						if touchin_da_bounds == true:
+							in_bound = false
+							chode.get_child(0).modulate = Color(1,0,0)
+							print(chode.get_child(0).modulate)
+						else:
+							in_bound = true
+							chode.get_child(0).modulate = Color(1,1,1)
+						chode.get_child(0).global_position = ghost_pos
+				await frame#get_tree().create_timer(1.0/120).timeout
 			if focused == false:
 				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
 				get_parent().set_meta("placed",true)
 		#print("Mouse Click/Unclick at: ", event.position)
 		#print((event.position.x >= position.x and event.position.x <= (position.x + 256))and(event.position.y >= position.y and event.position.y <= (position.y + 512)))
+
+func bound_check():
+	var i3 = -1
+	for child in $bound_check.get_children():
+		i3 += 1
+		print(check_list)
+		print(abled)
+		if abled.has(check_list[i3]):
+			child.disabled = false
+			print("i3s, ",i3)
+		else:
+			child.queue_free()
+			print("i3, ",i3,", ",check_list[i3])
+#						if ghost_pos.x < 192 + tet_offset.rotated(rotation).x:
+#							ghost_pos.x = 192 + tet_offset.rotated(rotation).x
+#						if ghost_pos.y < 150 + tet_offset.rotated(rotation).y:
+#							ghost_pos.y = 150 + tet_offset.rotated(rotation).y
+#						if ghost_pos.x >= 960 + tet_offset.rotated(rotation).x and tetromino_type == 6:
+#							ghost_pos.x = 896 + tet_offset.rotated(rotation).x
+#						elif ghost_pos.x >= 896 + tet_offset.rotated(rotation).x:
+#							ghost_pos.x = 832 + tet_offset.rotated(rotation).x
+#						if ghost_pos.y >= 470 + tet_offset.rotated(rotation).y * (cur_scale * 2) and tetromino_type == 0:
+#							ghost_pos.y = 406 + tet_offset.rotated(rotation).y * (cur_scale * 2)
+#						elif ghost_pos.y >= 342 + tet_offset.rotated(rotation).y * (cur_scale * 2) and tetromino_type == 6:
+#							ghost_pos.y = 278 + tet_offset.rotated(rotation).y * (cur_scale * 2)
+#						elif ghost_pos.y >= 406 + tet_offset.rotated(rotation).y:
+#							ghost_pos.y = 346 + tet_offset.rotated(rotation).y * (cur_scale * 2)
+
+
+func _on_bound_check_area_entered(area: Area2D) -> void:
+	if area.is_in_group("bounds"):
+		touchin_da_bounds = true
+		print("inside")
+
+
+func _on_bound_check_area_exited(area: Area2D) -> void:
+	if area.is_in_group("bounds"):
+		touchin_da_bounds = false
+		print("outside")
