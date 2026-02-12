@@ -24,6 +24,9 @@ public partial class Llevel : Node2D
 		GetNode<Label>("Level UI/ScoreContain/MinPer").Text = minimum.ToString() + "%";
 		GetNode<Label>("Level UI/StageContain/StageNum").Text = stage.ToString();
 		GD.Print("stage: ", stage, " | Percent: ", minimum);
+		TetroMain1 = GetNode<Node2D>("TetrominoGen");
+		TetroMain2 = GetNode<Node2D>("TetrominoGen2");
+		TetroMain3 = GetNode<Node2D>("TetrominoGen3");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,17 +38,27 @@ public partial class Llevel : Node2D
 		}
 	}
 
-	public void spawnTetromino(Marker2D used)
+	public void spawnTetromino(Marker2D used,int num)
 	{
-		Control instance = (Control)tetro.Instantiate();
+		Node2D instance = (Node2D)tetro.Instantiate();
 		AddChild(instance);
 		instance.Position = used.Position ;
-		instance.Rotation = Mathf.DegToRad(90);
-		instance.Scale = new Vector2(0.2f,0.2f);
-		TetroMain1.scale
+		instance.Scale = new Vector2(0.1f,0.1f);
+		if(num==1)
+		{
+			TetroMain1 = instance;
+		}
+		else if(num==2)
+		{
+			TetroMain2 = instance;
+		}
+		else
+		{
+			TetroMain3 = instance;
+		}
 	}
-	public void _on_tetro_1_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D"));}
-	public void _on_tetro_2_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D2"));}
-	public void _on_tetro_3_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D3"));}
+	public void _on_tetro_1_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D"),1);}
+	public void _on_tetro_2_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D2"),2);}
+	public void _on_tetro_3_signal_button_down(){spawnTetromino(GetNode<Marker2D>("Marker2D3"),3);}
 	
 }
