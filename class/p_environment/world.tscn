@@ -8,19 +8,11 @@ texture_filter = 1
 script = ExtResource("1_choow")
 metadata/Stage = 1
 metadata/Currency = 0
-metadata/Items = [null, null, null, null, null]
-metadata/Powers = [null, null, null, null, null]
 
-[node name="Shop" type="Node2D" parent="." unique_id=912659844]
-position = Vector2(2088, 0)
+[node name="Items" type="Node2D" parent="." unique_id=2077416209]
 
-[node name="Level" type="Node2D" parent="." unique_id=2105379977]
+[node name="Powers" type="Node2D" parent="." unique_id=289459270]
 
-[node name="LLevel" parent="Level" unique_id=16523455 instance=ExtResource("2_choow")]
-position = Vector2(576, 320)
+[node name="LLevel" parent="." unique_id=16523455 instance=ExtResource("2_choow")]
 
-[node name="TetrominoGen" parent="Level/LLevel" index="6" unique_id=1993780603]
-position = Vector2(256, -64)
-
-[editable path="Level/LLevel"]
-[editable path="Level/LLevel/Level UI"]
+[connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]

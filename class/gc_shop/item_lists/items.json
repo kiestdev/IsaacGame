@@ -1,7 +1,7 @@
 [
-  {"ID": 0,"name": "Garden Gnome","sprite": "res://art/gnome.png","price":4,"spawns":2,"spawnAsset":"res://art/gnome_fixed.png"},
-  {"ID": 1,"name": "Fountain","sprite": "res://art/fountain_small.png","price": 7,"spawns":1,"spawnAsset":"res://art/fountain.png"},
-  {"ID": 2,"name": "Fertilizer Bag","sprite": "res://art/fretalizer.png","price":5,"spawns":0,"spawnAsset":"res://art/dirttileset/fertalizertile.png"},
-  {"ID": 3,"name": "Leaf-Blower","sprite": "res://art/items/leafblower.png","price":4,"spawns":0,"spawnAsset":"res://art/items/itemsSubresource/leafves.png"},
-  {"ID": 4,"name": "Lawn Chair","sprite": "res://art/items/lawnchair.png","price":7,"spawns":1,"spawnAsset":"res://art/items/lawnchair.png"}
+  {"ID": 0,"name": "Garden Gnome","sprite": "res://art/gnome.png","price":4,"spawns":2,"spawnAsset":"res://art/gnome_fixed.png","Desc":"4 Gnomes are placed at start. Flowers placed on top of Gnome double in size."},
+  {"ID": 1,"name": "Fountain","sprite": "res://art/fountain_small.png","price": 7,"spawns":1,"spawnAsset":"res://art/fountain.png","Desc":"A fountain is placed at start in the center. Flowers placed adjacent score an extra 2% per tile."},
+  {"ID": 2,"name": "Fertilizer Bag","sprite": "res://art/fretalizer.png","price":5,"spawns":0,"spawnAsset":"res://art/dirttileset/fertalizertile.png","Desc":"A plot of fertilizer is placed at start. Flowers placed on top can be placed again."},
+  {"ID": 3,"name": "Leaf-Blower","sprite": "res://art/items/leafblower.png","price":4,"spawns":0,"spawnAsset":"res://art/items/itemsSubresource/leafves.png","Desc":"A pile of leaves is placed at start. Flowers placed on top do not take any tiles, but still score as if they did."},
+  {"ID": 4,"name": "Lawn Chair","sprite": "res://art/items/lawnchair.png","price":7,"spawns":1,"spawnAsset":"res://art/items/lawnchair.png","Desc":"A lawn chair is placed at start. Flowers placed on top Re-Trigger"}
   ]

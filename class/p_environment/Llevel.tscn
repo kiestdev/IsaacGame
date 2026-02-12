@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://3dtmwxmndu5p" path="res://art/gnome_fixed.png" id="3_y732a"]
 [ext_resource type="PackedScene" uid="uid://cr7xnaki7v02t" path="res://class/p_environment/level_ui.tscn" id="4_ul6te"]
 [ext_resource type="Texture2D" uid="uid://umgdggc8dujk" path="res://art/fountain.png" id="7_avsbc"]
+[ext_resource type="PackedScene" uid="uid://d376ey7thmp0q" path="res://class/p_environment/bounds.tscn" id="9_2m8el"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqcfu"]
 resource_name = "Dirt!"
@@ -105,7 +106,7 @@ position = Vector2(402, -129)
 scale = Vector2(420, 186)
 
 [node name="GnomeFixed" type="Sprite2D" parent="." unique_id=741176872]
-position = Vector2(304, 16)
+position = Vector2(288, -292)
 texture = ExtResource("3_y732a")
 
 [node name="Level UI" parent="." unique_id=726885060 instance=ExtResource("4_ul6te")]
@@ -124,7 +125,21 @@ grow_vertical = 1
 [node name="TetrominoGen" parent="." unique_id=1993780603 instance=ExtResource("2_ul6te")]
 z_index = 2
 texture_filter = 1
-scale = Vector2(0.5, 0.5)
+position = Vector2(191.99998, -132)
+scale = Vector2(0.2, 0.2)
+
+[node name="TetrominoGen2" parent="." unique_id=180390864 instance=ExtResource("2_ul6te")]
+z_index = 2
+texture_filter = 1
+position = Vector2(-175.99998, 75.99999)
+scale = Vector2(0.2, 0.2)
+
+[node name="TetrominoGen3" parent="." unique_id=1693299478 instance=ExtResource("2_ul6te")]
+z_index = 2
+texture_filter = 1
+position = Vector2(-192.00002, -284.00003)
+rotation = 1.5707964
+scale = Vector2(0.2, 0.2)
 
 [node name="Fountain" type="Sprite2D" parent="." unique_id=817505316]
 scale = Vector2(0.5, 0.5)
@@ -135,4 +150,48 @@ texture = ExtResource("7_avsbc")
 [node name="Camera" type="Camera2D" parent="LevelMark" unique_id=1187648727]
 texture_filter = 1
 
+[node name="Marker2D" type="Marker2D" parent="." unique_id=426641770]
+position = Vector2(-192, -284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Tetro1signal" type="Button" parent="Marker2D" unique_id=1717398518]
+offset_left = -208.0
+offset_right = 8.0
+offset_bottom = 112.0
+flat = true
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=370133726]
+position = Vector2(0, -284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Tetro1signal" type="Button" parent="Marker2D2" unique_id=806551427]
+offset_left = -208.0
+offset_right = 8.0
+offset_bottom = 112.0
+flat = true
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=69713124]
+position = Vector2(192, -284)
+scale = Vector2(0.5, 0.5)
+
+[node name="Tetro1signal" type="Button" parent="Marker2D3" unique_id=632574412]
+offset_left = -208.0
+offset_bottom = 112.0
+flat = true
+
+[node name="Area2D" parent="." unique_id=1860027666 instance=ExtResource("9_2m8el")]
+visible = false
+position = Vector2(-576, -332)
+
+[node name="upper" parent="Area2D" index="0" unique_id=1347955064]
+position = Vector2(576, 48)
+
+[node name="left" parent="Area2D" index="1" unique_id=1816067876]
+position = Vector2(83, 342)
+
+[connection signal="button_down" from="Marker2D/Tetro1signal" to="." method="_on_tetro_1_signal_button_down"]
+[connection signal="button_down" from="Marker2D2/Tetro1signal" to="." method="_on_tetro_2_signal_button_down"]
+[connection signal="button_down" from="Marker2D3/Tetro1signal" to="." method="_on_tetro_3_signal_button_down"]
+
 [editable path="Level UI"]
+[editable path="Area2D"]

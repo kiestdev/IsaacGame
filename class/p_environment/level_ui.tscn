@@ -25,17 +25,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_evm6m")
 
-[node name="TetrominoTray" type="Sprite2D" parent="." unique_id=865721164]
-position = Vector2(535, 68)
-rotation = 3.1415927
-scale = Vector2(0.65, 0.65)
-texture = ExtResource("3_56b3f")
-
-[node name="TileTray" type="Sprite2D" parent="." unique_id=1812362649]
-position = Vector2(875, 68)
-scale = Vector2(0.25296435, 0.5)
-texture = ExtResource("1_1la40")
-
 [node name="Switcher" type="Node2D" parent="." unique_id=2124189965]
 position = Vector2(823, 564)
 
@@ -152,27 +141,6 @@ layout_mode = 2
 
 [node name="ItemHolder4" parent="ItemHolder/PowerFlow/PowerupContain" unique_id=726825351 instance=ExtResource("3_evm6m")]
 layout_mode = 2
-
-[node name="Control" type="Control" parent="." unique_id=1917168058]
-anchors_preset = 0
-offset_left = 839.0
-offset_top = 36.0
-offset_right = 911.0
-offset_bottom = 100.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=314315420]
-position = Vector2(36.000023, 24)
-scale = Vector2(0.3124992, 0.3125)
-texture = ExtResource("4_lt5s6")
-
-[node name="Label" type="Label" parent="Control" unique_id=300426125]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 40.0
-offset_right = 56.0
-offset_bottom = 63.0
-theme = SubResource("Theme_56b3f")
-text = "Null"
 
 [node name="ScoreContain" type="Node2D" parent="." unique_id=1569447514]
 position = Vector2(7, 28)
@@ -307,5 +275,41 @@ theme_override_fonts/font = ExtResource("3_5ud74")
 theme_override_font_sizes/font_size = 13
 text = "Stage"
 metadata/_edit_use_anchors_ = true
+
+[node name="TetrominoContain" type="Node2D" parent="." unique_id=641471738]
+position = Vector2(256, 24)
+
+[node name="Control" type="Control" parent="TetrominoContain" unique_id=1917168058]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 583.0
+offset_top = 12.0
+offset_right = 655.0
+offset_bottom = 76.0
+
+[node name="TileTray" type="Sprite2D" parent="TetrominoContain/Control" unique_id=1812362649]
+position = Vector2(36, 32)
+scale = Vector2(0.25296435, 0.5)
+texture = ExtResource("1_1la40")
+
+[node name="Sprite2D" type="Sprite2D" parent="TetrominoContain/Control" unique_id=314315420]
+position = Vector2(36.000023, 24)
+scale = Vector2(0.3124992, 0.3125)
+texture = ExtResource("4_lt5s6")
+
+[node name="Label" type="Label" parent="TetrominoContain/Control" unique_id=300426125]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 63.0
+theme = SubResource("Theme_56b3f")
+text = "Null"
+
+[node name="TetrominoTray" type="Sprite2D" parent="TetrominoContain" unique_id=865721164]
+position = Vector2(279.3424, 40)
+rotation = -3.1415925
+scale = Vector2(0.6664997, 0.65)
+texture = ExtResource("3_56b3f")
 
 [connection signal="toggled" from="Switcher/Modeswitch" to="." method="_on_modeswitch_toggled"]
