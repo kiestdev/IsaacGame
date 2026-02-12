@@ -5,7 +5,7 @@ const flower3 = preload("res://class/resources/RPansy.tscn")
 const flower4 = preload("res://class/resources/RSunflower.tscn")
 var cur_scale 
 var focused = false
-var tet_offset = Vector2(0,4) #fuck this stupid fucking cuck ass ui
+var tet_offset = Vector2(0,0) #fuck this stupid fucking cuck ass ui
 var touchin_da_bounds = false
 var tetromino_type = 0 
 var check_list = [$"1",$"2",$"3",$"4",$"5",$"6",$"7"]
@@ -155,6 +155,11 @@ func _input(event):
 						chode.get_child(0).global_position = ghost_pos
 				await frame#get_tree().create_timer(1.0/120).timeout
 			if focused == false:
+				if get_parent().scale.x == 1.0:
+					get_parent().set_meta("tile_percent",((16.0/72)*100))
+				else:
+					get_parent().set_meta("tile_percent",((4.0/72)*100))
+				print(get_parent().get_meta("tile_percent"))
 				global_position = ghost_pos#position.snapped(Vector2(128*cur_scale,128*cur_scale))
 				get_parent().set_meta("placed",true)
 		#print("Mouse Click/Unclick at: ", event.position)
