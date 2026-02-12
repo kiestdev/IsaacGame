@@ -5,11 +5,12 @@
 [ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="3_5ud74"]
 [ext_resource type="Texture2D" uid="uid://c4mruwlr7h830" path="res://art/ui/itembox.png" id="3_56b3f"]
 [ext_resource type="PackedScene" uid="uid://c3xx5qqlb32vf" path="res://class/resources/item_holder.tscn" id="3_evm6m"]
+[ext_resource type="Texture2D" uid="uid://bwel83r1cgbgd" path="res://art/ui/swapicon.png" id="4_l0nt4"]
 [ext_resource type="Texture2D" uid="uid://b6v3ww2jh4i7a" path="res://art/grasstileset/fullgrasspiece.png" id="4_lt5s6"]
 [ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="5_5ud74"]
-[ext_resource type="Texture2D" uid="uid://dyhy5k1wts10c" path="res://art/Flowers/mini/minisunflower.png" id="8_y33wi"]
-[ext_resource type="Texture2D" uid="uid://dsiafuoa6enu2" path="res://art/Big_coin_fixed.png" id="9_gi6bg"]
-[ext_resource type="Texture2D" uid="uid://dtjyfshscsqaq" path="res://art/Powerups/small_coin.png" id="10_gi6bg"]
+[ext_resource type="Texture2D" uid="uid://dke31nki5sna5" path="res://art/Flowers/mini/minisunflower.png" id="8_y33wi"]
+[ext_resource type="Texture2D" uid="uid://cy7pnf0b4dgiw" path="res://art/Big_coin_fixed.png" id="9_gi6bg"]
+[ext_resource type="Texture2D" uid="uid://bnh0qdeys3pxe" path="res://art/Powerups/small_coin.png" id="10_gi6bg"]
 
 [sub_resource type="Theme" id="Theme_56b3f"]
 default_font = ExtResource("5_5ud74")
@@ -39,14 +40,21 @@ texture = ExtResource("1_1la40")
 position = Vector2(823, 564)
 
 [node name="SwitchTray" type="Sprite2D" parent="Switcher" unique_id=737976517]
-position = Vector2(28, 16)
-scale = Vector2(0.25296435, 0.24999978)
+position = Vector2(30, 8.999981)
+scale = Vector2(0.25296435, 0.4453126)
 texture = ExtResource("1_1la40")
 
 [node name="Modeswitch" type="CheckButton" parent="Switcher" unique_id=795190152]
+modulate = Color(1, 1, 1, 0)
 offset_top = -6.1035156e-05
 offset_right = 48.0
 offset_bottom = 31.999939
+
+[node name="Swapicon" type="Sprite2D" parent="Switcher" unique_id=787000006]
+texture_filter = 1
+position = Vector2(31, 9)
+scale = Vector2(1.3125013, 1.3125013)
+texture = ExtResource("4_l0nt4")
 
 [node name="ItemHolder" type="Node2D" parent="." unique_id=1052014990]
 position = Vector2(-1, 20)
