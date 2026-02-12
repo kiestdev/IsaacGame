@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://dr42lhremr0f1" path="res://art/open_.png" id="3_4h8kd"]
 [ext_resource type="FontFile" uid="uid://ht10ocwsxj2o" path="res://Assets/Font/dogicapixelbold.otf" id="3_08ksx"]
 [ext_resource type="Texture2D" uid="uid://b2xorynabivf1" path="res://art/ui/StartQuitButton.png" id="3_nxqxv"]
-[ext_resource type="Texture2D" uid="uid://oxb443cd58p4" path="res://art/ui/title.png" id="3_pkit3"]
+[ext_resource type="Texture2D" uid="uid://dndoew57v7t0y" path="res://art/ui/title.png" id="3_pkit3"]
 [ext_resource type="FontFile" uid="uid://bjfl3kia56mqb" path="res://Assets/Font/dogicapixel.otf" id="6_4h8kd"]
+[ext_resource type="Script" uid="uid://652ekb854jx6" path="res://class/p_environment/credits.gd" id="7_iir37"]
 
 [node name="MainMenu" type="Control" unique_id=772716003]
 texture_filter = 1
@@ -47,6 +48,23 @@ icon = ExtResource("3_nxqxv")
 flat = true
 icon_alignment = 1
 
+[node name="credits" type="Button" parent="." unique_id=1168101384]
+layout_mode = 0
+offset_left = -66.0
+offset_top = 197.0
+offset_right = 195.0
+offset_bottom = 333.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.67, 0.19430003, 0.3052966, 1)
+theme_override_colors/font_hover_color = Color(0.4745098, 0.21176471, 0.16470589, 1)
+theme_override_fonts/font = ExtResource("6_4h8kd")
+theme_override_font_sizes/font_size = 30
+text = "CREDITS"
+icon = ExtResource("3_nxqxv")
+flat = true
+icon_alignment = 1
+script = ExtResource("7_iir37")
+
 [node name="quit" type="Button" parent="." unique_id=131747048]
 layout_mode = 0
 offset_left = -68.0
@@ -70,4 +88,5 @@ scale = Vector2(2.8, 2.8)
 texture = ExtResource("3_pkit3")
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="credits" to="credits" method="_on_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
